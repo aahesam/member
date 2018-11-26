@@ -1,5 +1,5 @@
 <?php
-define('API_KEY','744817340:AAGD4W6dMBxCl_pwZpxqB_7t723Zmsy9lE4');
+define('API_KEY','702918678:AAF6cIIT2-4uuswBdbrDXPii0pHetvZnins');
 $admin = 698038310;
 $host_folder = 'https://lionveiw.000webhostapp.com/botsaz';
 function makereq($method,$datas=[])
