@@ -3,12 +3,12 @@
 توکن و ایدی عددی و آیدی چنل رو تنظیم کنید
 نیازی به ساخت پوشه دیتا  نیس
 نویسنده :
-@GoldDev
+@khabar_arz
 فروش و کپی سورس به اسم خودتون حرام
 
 */
 ob_start();
-define('API_KEY','TOKEN'); // token bot
+define('API_KEY','755659261:AAFpQaNvhIDCuUPe0kBlCnfVTDxHz41OoDQ'); // token bot
 //-------
 function bot($method,$datas=[]){
     $url = "https://api.telegram.org/bot".API_KEY."/".$method;
@@ -29,9 +29,9 @@ $chat_id = $message->chat->id;
 $message_id = $message->message_id;
 $from_id = $message->from->id;
 $textmessage = $message->text;
-$admin = "AMDIN"; // id adadi admin
-$TOKEN = "TOKEN"; // token bot
-$CHANNEL = "CHANNEL"; // channel ba @
+$admin = "698038310"; // id adadi admin
+$TOKEN = "755659261:AAFpQaNvhIDCuUPe0kBlCnfVTDxHz41OoDQ"; // token bot
+$CHANNEL = "@Del_Araamam"; // channel ba @
 $users = json_decode(file_get_contents("users.json"),true);
 $stepuser = $users["$from_id"]["step"];
 $members = file_get_contents("members.txt");
@@ -781,7 +781,7 @@ ForwardMessage($user,$admin,$message_id);
 توکن و ایدی عددی و آیدی چنل رو تنظیم کنید
 نیازی به ساخت پوشه دیتا  نیس
 نویسنده :
-@GoldDev
+@khabar_arz
 فروش و کپی سورس به اسم خودتون حرام
 
 */
