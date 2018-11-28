@@ -11,7 +11,7 @@ set_time_limit(0);
 flush();
 
 
-$API_KEY = 'a1'; // توکن ربات
+$API_KEY = '610047686:AAHZ0jmWgZ_sLLqSyGqgCVWnM0lMAVWsRng'; // توکن ربات
 ##------------------------------##
 define('API_KEY', $API_KEY);
 /*فانکشن برای هر سورسی الزامی است و ادیت کردن این بخش به هیچ وج توصیه نمیشود*/
@@ -149,7 +149,7 @@ $text = $message->text;
 $rasol = file_get_contents("databot/$chat_id/rasol.txt");
 $dataa=$update->callback_query->data;
 $chatidd = $update->callback_query->from->id;
-$ADMIN = a2; // ایدی عددی ادمین
+$ADMIN = 698038310; // ایدی عددی ادمین
 $chatid = $update->callback_query->message->chat->id;
 $databot = $update->callback_query->databot;
 $message_id2 = $update->callback_query->message->message_id;
@@ -164,9 +164,9 @@ $textmaschannel = 🔒 ربات قفل است.
 
 ⚠️ برای فعالیت در ربات لطفا در کانال های ( 🔊مدیریت کانال📢 , 🤖نیک سورس🤖 )  عضو شوید
 
-🔊مدیریت کانال📢 :@a3
+🔊مدیریت کانال📢 :@khabar_arz
 
-کانال نیک سورس: @a3
+کانال خبر ارز: @khabar_arz
 
 ♻️ پس از عضویت لطفا روی دکمه ی ( عضو شدم🛰  ) کلیک کنید.;
 ///
@@ -304,20 +304,20 @@ if($check11 != "member" && $check11 != "creator" && $check11 != "administrator" 
             'message_id' => $message_id2,
         'text'=>"شما هنوز عضو کانال ها نشده اید!!!!!!!!!!!!!!
 
-⚠️ برای فعالیت در ربات لطفا در کانال های ( 🔊مدیریت کانال📢 , 🤖نیک سورس🤖 )  عضو شوید
+⚠️ برای فعالیت در ربات لطفا در کانال های ( 🔊مدیریت کانال📢 , 🤖خبر ارز🤖 )  عضو شوید
 
-🔊مدیریت کانال📢 :@a3
+🔊مدیریت کانال📢 :@khabar_arz
 
-🤖نیک سورس🤖 :@a3
+🤖خبر ارز🤖 :@khabar_arz
 
 ♻️ پس از عضویت لطفا روی دکمه ی ( عضو شدم🛰  ) کلیک کنید.", 
         'reply_markup'=>json_encode([ 
             'inline_keyboard'=>[ 
                 [ 
-                    ['text'=>"🔊مدیریت کانال📢",'url'=>"https://telegram.me/a3"] 
+                    ['text'=>"🔊مدیریت کانال📢",'url'=>"https://telegram.me/khabar_arz"] 
                 ] ,
                 [ 
-                    ['text'=>"🤖نیک سورس🤖",'url'=>"https://telegram.me/a3"] 
+                    ['text'=>"خبر ارز",'url'=>"https://telegram.me/khabar_arz"] 
                 ] ,
     [
   ['text'=>"عضو شدم🛰",'callback_data'=>'join']
@@ -344,10 +344,10 @@ if($check1 != "member" && $check1 != "creator" && $check1 != "administrator" or 
         'reply_markup'=>json_encode([ 
             'inline_keyboard'=>[ 
                 [ 
-                    ['text'=>"🔊مدیریت کانال📢",'url'=>"https://telegram.me/a3"] 
+                    ['text'=>"🔊مدیریت کانال📢",'url'=>"https://telegram.me/khabar_arz"] 
                 ] ,
                 [ 
-                    ['text'=>"🤖نیک سورس🤖",'url'=>"https://telegram.me/a3"] 
+                    ['text'=>"خبر ارز",'url'=>"https://telegram.me/khabar_arz"] 
                 ] ,
     [
   ['text'=>"عضو شدم🛰",'callback_data'=>'join']
@@ -380,10 +380,10 @@ if($check1 != "member" && $check1 != "creator" && $check1 != "administrator" or 
         'reply_markup'=>json_encode([ 
             'inline_keyboard'=>[ 
                 [ 
-                    ['text'=>"🔊مدیریت کانال📢",'url'=>"https://telegram.me/a3"] 
+                    ['text'=>"🔊مدیریت کانال📢",'url'=>"https://telegram.me/khabar_arz"] 
                 ] ,
                 [ 
-                    ['text'=>"🤖نیک سورس🤖",'url'=>"https://telegram.me/a3"] 
+                    ['text'=>"خبر ارز",'url'=>"https://telegram.me/khabar_arz"] 
                 ] ,
 		[
 	['text'=>"عضو شدم🛰",'callback_data'=>'join']
@@ -629,9 +629,9 @@ $lickeem = file_get_contents("databot/like/$lik-lick.txt");
 				}elseif($rasol=="phrto"){
 				if(isset($message->photo)){
 					file_put_contents("databot/$chat_id/rasol.txt","no");
-					$url = json_decode(file_get_contents('https://api.telegram.org/botتوکن ربات/getFile?file_id='.$file_id),true);
+					$url = json_decode(file_get_contents('https://api.telegram.org/bot610047686:AAHZ0jmWgZ_sLLqSyGqgCVWnM0lMAVWsRng/getFile?file_id='.$file_id),true);
 				$path=$url['result']['file_path'];
-           $file = 'https://api.telegram.org/file/botتوکن ربات/'.$path;
+           $file = 'https://api.telegram.org/file/bot610047686:AAHZ0jmWgZ_sLLqSyGqgCVWnM0lMAVWsRng/'.$path;
 					file_put_contents("databot/$chat_id/$file_id.jpg",file_get_contents($file));
 					$text=file_get_contents("databot/$chat_id/text.txt");
 $id = file_get_contents("databot/$chat_id/idfla.txt");
@@ -657,7 +657,7 @@ $id = file_get_contents("databot/$chat_id/idfla.txt");
     } elseif ($text == "🎈دریافت لینک کانال💈") {
             sendAction($chat_id, 'typing');
 $id = file_get_contents("databot/$chat_id/idfla.txt");
-$getlink = file_get_contents("https://api.telegram.org/bot630888682:AAFXY9CU_ZGBgN77WJBN8PN8xyuemQV2Gwo/exportChatInviteLink?chat_id=@".$id);
+$getlink = file_get_contents("https://api.telegram.org/bot610047686:AAHZ0jmWgZ_sLLqSyGqgCVWnM0lMAVWsRng/exportChatInviteLink?chat_id=@".$id);
 $jsonlink = json_decode($getlink, true);
 $getlinkde = $jsonlink['result'];
 bot('sendmessage',[
@@ -670,7 +670,7 @@ $getlinkde",
     } elseif ($text == "🗝ادمین های کانال🛎") {
             sendAction($chat_id, 'typing');
 $id = file_get_contents("databot/$chat_id/idfla.txt");
-  $up = json_decode(file_get_contents("https://api.telegram.org/bot630888682:AAFXY9CU_ZGBgN77WJBN8PN8xyuemQV2Gwo/getChatAdministrators?chat_id=@".$id),true);
+  $up = json_decode(file_get_contents("https://api.telegram.org/bot610047686:AAHZ0jmWgZ_sLLqSyGqgCVWnM0lMAVWsRng/getChatAdministrators?chat_id=@".$id),true);
   $result = $up['result'];
   foreach($result as $key=>$value){
     $found = $result[$key]['status'];
@@ -1126,10 +1126,10 @@ if($check1 != "member" && $check1 != "creator" && $check1 != "administrator" or 
         'reply_markup'=>json_encode([ 
             'inline_keyboard'=>[ 
                 [ 
-                    ['text'=>"🔊مدیریت کانال📢",'url'=>"https://telegram.me/a3"] 
+                    ['text'=>"🔊مدیریت کانال📢",'url'=>"https://telegram.me/khabar_arz"] 
                 ] ,
                 [ 
-                    ['text'=>"🤖نیک سورس🤖",'url'=>"https://telegram.me/a3"] 
+                    ['text'=>"خبر ارز",'url'=>"https://telegram.me/khabar_arz"] 
                 ] ,
     [
   ['text'=>"عضو شدم🛰",'callback_data'=>'join']
@@ -1224,7 +1224,7 @@ if($check1 != "member" && $check1 != "creator" && $check1 != "administrator" or 
                     ['text'=>"🔊مدیریت کانال📢",'url'=>"https://telegram.me/php_sources"] 
                 ] ,
                 [ 
-                    ['text'=>"🤖نیک سورس🤖",'url'=>"https://telegram.me/a3"] 
+                    ['text'=>"خبر ارز",'url'=>"https://telegram.me/khabar_arz"] 
                 ] ,
     [
   ['text'=>"عضو شدم🛰",'callback_data'=>'join']
@@ -1258,7 +1258,7 @@ if($check1 != "member" && $check1 != "creator" && $check1 != "administrator" or 
                     ['text'=>"🔊مدیریت کانال📢",'url'=>"https://telegram.me/a3"] 
                 ] ,
                 [ 
-                    ['text'=>"🤖نیک سورس🤖",'url'=>"https://telegram.me/a3"] 
+                    ['text'=>"خبز ارز",'url'=>"https://telegram.me/a3"] 
                 ] ,
     [
   ['text'=>"عضو شدم🛰",'callback_data'=>'join']
@@ -1298,12 +1298,12 @@ bot("answerInlineQuery",[
       "type"=>"article",
       "id"=>base64_encode(rand(5,555)),
       "title"=>"سازنده ربات 🤖",
-      "input_message_content"=>["parse_mode"=>"html","message_text"=>"T.me/a3 کانالی نیک سورس
-@a3"],
+      "input_message_content"=>["parse_mode"=>"html","message_text"=>"T.me/khabar_arz کانال خبر ارز
+@khabar_arz"],
       "thumb_url"=>"http://s9.picofile.com/file/8319334334/photo_%DB%B2%DB%B0%DB%B1%DB%B7_%DB%B1%DB%B0_%DB%B2%DB%B2_%DB%B2%DB%B0_%DB%B4%DB%B1_%DB%B4%DB%B4.jpg",
-     "reply_markup"=>["inline_keyboard"=>[[["text"=>"🔊مدیریت کانال📢","url"=>"http://telegram.me/a3"],["text"=>"🤖نیک سورس🤖","url"=>"http://telegram.me/a3"]],
-[["text"=>"💥MY","url"=>"http://telegram.me/Php_Sources"]],
-[["text"=>"😎NicSource😎","url"=>"http://telegram.me/a3"]],
+     "reply_markup"=>["inline_keyboard"=>[[["text"=>"🔊مدیریت کانال📢","url"=>"http://telegram.me/khabar_arz"],["text"=>"🤖خبر ارز🤖","url"=>"http://telegram.me/khabar_arz"]],
+[["text"=>"💥MY","url"=>"http://telegram.me/khabar_arz"]],
+[["text"=>"😎khabar_arz😎","url"=>"http://telegram.me/khabar_arz"]],
 [["text"=>"🔍اشتراک برای دیگران🚀","switch_inline_query"=>"سازنده ربات 🤖"]]]]
     ]])
   ]);
