@@ -293,7 +293,7 @@ bot('Sendmessage',[
 ],'remove_keyboard'=>true])
 ]);
 }
-if ($text == "بازگشت") {
+if ($text == "بازگشت" or $text == "/start") {
 		
          file_put_contents("data/$chat_id/saeed.txt", "No");
         sendAction($chat_id, 'typing');
