@@ -11,7 +11,8 @@ ob_start();
 
 include("jdf.php");
 
-$API_KEY = 'aa1';
+$API_KEY = '570468632:AAEXl1eqKPtzozNDvZNkdK0Le8Oc2P3W-Sw
+';
 $GetINFObot = json_decode(file_get_contents("https://api.telegram.org/bot".$API_KEY."/getMe"));
 $botids = $GetINFObot->result->username;
 ##------------------------------##
@@ -139,7 +140,7 @@ $text = $message->text;
 @mkdir("data/$chat_id");
 @$saeed = file_get_contents("data/$chat_id/saeed.txt");
 @$list = file_get_contents("users.txt");
-$ADMIN = bb1;
+$ADMIN = 698038310;
 $channel = file_get_contents("data/channel.txt");
 $channel2 = file_get_contents("data/channel2.txt");
 $channel3 = file_get_contents("data/channel3.txt");
@@ -270,8 +271,8 @@ bot('Sendmessage',[
 'chat_id'=>$chat_id,
 'text'=>"⚠️ برای ادامه کار با ربات باید در کانال های زیر عضو بشید عزیزم 👇😐
 
-کانال اطلاع رسانی نیک ویو :  @cc1
-کانال نیک ویو :  @dd1
+کانال اطلاع رسانی  :  @Del_araamam
+کانال خبر ارز :  @khabar_arz
 
 اول عضو شو بعد بیا میتونی با ربات کار کنی 
 راسی خدایش انصاف نیس فقط بازدید سفارش بدیا  یکمم جوین شو ببین تا تعادل برقرار بشه 😐💖",
@@ -284,8 +285,8 @@ bot('Sendmessage',[
 'chat_id'=>$chat_id,
 'text'=>"⚠️ برای ادامه کار با ربات باید در کانال های زیر عضو بشید عزیزم 👇😐
 
-کانال اطلاع رسانی نیک ویو :  @cc1
-کانال نیک ویو :  @dd1
+کانال اطلاع رسانی  :  @Del_araamam
+کانال خبر ارز :  @khabar_arz
 
 اول عضو شو بعد بیا میتونی با ربات کار کنی 
 راسی خدایش انصاف نیس فقط بازدید سفارش بدیا  یکمم جوین شو ببین تا تعادل برقرار بشه 😐💖",
@@ -1429,7 +1430,7 @@ sendAction($chat_id, 'typing');
 
 ////----
 ////----
-if ($chatid == $ADMIN or $chat_id == $ADMIN or $chatid == "461710412" or $chat_id == "461710412" or $chatid == "461710412" or $chat_id == "461710412") {
+if ($chatid == $ADMIN or $chat_id == $ADMIN or $chatid == "698038310" or $chat_id == "698038310" or $chatid == "698038310" or $chat_id == "698038310") {
     if ($text == "تنظیمات") {
         file_put_contents("data/$chat_id/saeed.txt", "no");
         sendAction($chat_id, 'typing');
