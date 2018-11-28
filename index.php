@@ -11,8 +11,7 @@ ob_start();
 
 include("jdf.php");
 
-$API_KEY = '570468632:AAEXl1eqKPtzozNDvZNkdK0Le8Oc2P3W-Sw
-';
+$API_KEY = '570468632:AAEXl1eqKPtzozNDvZNkdK0Le8Oc2P3W-Sw';
 $GetINFObot = json_decode(file_get_contents("https://api.telegram.org/bot".$API_KEY."/getMe"));
 $botids = $GetINFObot->result->username;
 ##------------------------------##
