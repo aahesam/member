@@ -6,10 +6,10 @@
 
 @Monster_Source
 */
-$MainBotToken = '743525276:AAFdWMbs5szoXSTE7Rh7NV-LXv-FH6MW3jg'; // توکن ربات
-$Notices_Channel_Id = '-1001471091534'; // ایدی عددی کانال شما
-$Bot_Channel_Username = 'xxxx'; // یوزرنیم چنل
-$Admin_User_Id = '0000000'; // ایدی عددی ادمین
+$MainBotToken = '691161787:AAEx1hx8fsF7M5WnLwbt8CnysicT-fdMJlM'; // توکن ربات
+$Notices_Channel_Id = '-1001128336775'; // ایدی عددی کانال شما
+$Bot_Channel_Username = '@khabar_arz'; // یوزرنیم چنل
+$Admin_User_Id = '698038310'; // ایدی عددی ادمین
 define('API_KEY',$MainBotToken);
 ini_set("log_errors","off");
 function GoldDev($method,$datas=[]){
