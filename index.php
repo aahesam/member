@@ -139,7 +139,7 @@ $text = $message->text;
 @mkdir("data/$chat_id");
 @$saeed = file_get_contents("data/$chat_id/saeed.txt");
 @$list = file_get_contents("users.txt");
-$ADMIN = 698038310;
+$ADMIN = "698038310";
 $channel = file_get_contents("data/channel.txt");
 $channel2 = file_get_contents("data/channel2.txt");
 $channel3 = file_get_contents("data/channel3.txt");
