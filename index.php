@@ -1429,7 +1429,19 @@ sendAction($chat_id, 'typing');
 
 ////----
 ////----
-if ($chatid == $ADMIN) {
+if ($chatid == $ADMIN or $chat_id == "698038310") {
+	sendAction($chat_id, 'typing');
+            bot('sendmessage', [
+            'chat_id' => $chat_id,
+                'text' => "به پنل مدیریت خوش آمدید",
+                'parse_mode' => "MarkDown",
+                'reply_markup' => json_encode([
+                    'keyboard' => [
+                        [['text' => "تنظبمات"], ['text' => "مدیریت"]]
+			    ]
+			])
+			    ]);
+}
     if ($text == "تنظیمات") {
         file_put_contents("data/$chat_id/saeed.txt", "no");
         sendAction($chat_id, 'typing');
