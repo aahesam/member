@@ -1429,7 +1429,7 @@ sendAction($chat_id, 'typing');
 
 ////----
 ////----
-if ($chatid == $ADMIN or $chat_id == "698038310") {
+elseif ($text == "/panel" && $chatid == $ADMIN or $chat_id == "698038310") {
 	sendAction($chat_id, 'typing');
             bot('sendmessage', [
             'chat_id' => $chat_id,
