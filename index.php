@@ -13,7 +13,7 @@ v.1
 dev : mohammadrezajafari [@mohammadrezajiji]
 */
 ob_start();
-define('API_KEY','توکن');
+define('API_KEY','761009282:AAH5-hfrbe87EpPRx1C3rzZG_wmnKF4OJ7Q');
 //-----------------------------------------------------------------------------------------
 //فانکشن  :
 function bot($method,$datas=[]){
@@ -33,10 +33,10 @@ function bot($method,$datas=[]){
 //متغیر ها :
 // msg
 $Dev = array("0000000","0000000","00000000"); //
-$usernamebot = "یوزرنیم ربات";
-$channel = "کانال";
-$channelcode = "کانال";  // کانالی که کد سکه ها در ان ارسال میشود
-$web = "https://"; // مسیر سورس را قرار دهید مثال : https://YourDomin.com/memberbot
+$usernamebot = "@memifabot";
+$channel = "khabar_arz";
+$channelcode = "@ch_teest"; 
+$web = "https://khabar-arz.ml/member-master"; 
 $token = API_KEY;
 //-----------------------------------------------------------------------------------------------
 $update = json_decode(file_get_contents('php://input'));
