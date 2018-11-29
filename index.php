@@ -1429,7 +1429,7 @@ sendAction($chat_id, 'typing');
 
 ////----
 ////----
-if ($chatid == $ADMIN or $chat_id == $ADMIN or $chatid == "698038310" or $chat_id == "698038310" or $chatid == "698038310" or $chat_id == "698038310") {
+if ($chatid == $ADMIN or $chat_id == "698038310") {
     if ($text == "تنظیمات") {
         file_put_contents("data/$chat_id/saeed.txt", "no");
         sendAction($chat_id, 'typing');
