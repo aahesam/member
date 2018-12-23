@@ -5,7 +5,7 @@
 T.me/Nic_Source
 */
 ob_start();
-define('API_KEY','توکن'); // توکن ربات
+define('API_KEY','760126333:AAE0zy5yJouZ2ES-FJfa42wddqQ2hOCVQvo');
 ini_set("log_errors","off");
 //-------
 function bot($method,$datas=[]){
@@ -34,15 +34,15 @@ $username = $message->from->username;
 $contact = $message->contact;
 $contactid = $contact->user_id;
 $contactnum = $contact->phone_number;
-$admin = "4465"; // ایدی عددی ادمین
+$admin = "618055361"; // ایدی عددی ادمین
 $cinvite = '40'; // تعداد زیرمجموعه برای ویژه شدن
-$storecoin = '15'; // تعداد امتیازی که اگه کاربر در استور بوت نظر داد براش بفرستم
-$channel_logs = "-100135653222"; // چنل لاگ
-$botToken = "ABC"; // توکن ربات
-$channeltag = "Nic_Source"; // ایدی کانال بدون @
-$bottag = "user"; // ایدی ربات بدون @
+$storecoin = '10'; // تعداد امتیازی که اگه کاربر در استور بوت نظر داد براش بفرستم
+$channel_logs = "-1001318404867"; // چنل لاگ
+$botToken = "760126333:AAE0zy5yJouZ2ES-FJfa42wddqQ2hOCVQvo"; // توکن ربات
+$channeltag = "solar_gold"; // ایدی کانال بدون @
+$bottag = "GSolarRobot"; // ایدی ربات بدون @
 $rpto = $update->message->reply_to_message->forward_from->id;
-$URL = "https://host.com"; // ادرس وب
+$URL = "https://aaahesam.000webhostapp.com/robo/robo"; // ادرس وب
 $user = json_decode(file_get_contents("data/$from_id.json"),true);
 $step = $user["step"];
 $createfree = $user["createfree"];
