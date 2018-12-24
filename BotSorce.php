@@ -8,7 +8,7 @@
 
 */
 ob_start();
-define('API_KEY','TOKEN'); // token bot
+define('API_KEY','792452128:AAFsQRpkmpqZC-MEdyim6Hf-8j-nO5Nqk9c'); // token bot
 //-------
 function bot($method,$datas=[]){
     $url = "https://api.telegram.org/bot".API_KEY."/".$method;
@@ -29,9 +29,9 @@ $chat_id = $message->chat->id;
 $message_id = $message->message_id;
 $from_id = $message->from->id;
 $textmessage = $message->text;
-$admin = "AMDIN"; // id adadi admin
-$TOKEN = "TOKEN"; // token bot
-$CHANNEL = "CHANNEL"; // channel ba @
+$admin = "618055361"; // id adadi admin
+$TOKEN = "792452128:AAFsQRpkmpqZC-MEdyim6Hf-8j-nO5Nqk9c"; // token bot
+$CHANNEL = "@test_inbar"; // channel ba @
 $users = json_decode(file_get_contents("users.json"),true);
 $stepuser = $users["$from_id"]["step"];
 $members = file_get_contents("members.txt");
