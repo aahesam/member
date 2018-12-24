@@ -2,7 +2,7 @@
 
 ob_start();
 
-$API_KEY = 'توکن';
+$API_KEY = '792452128:AAFsQRpkmpqZC-MEdyim6Hf-8j-nO5Nqk9c';
 //========//
 define('API_KEY',$API_KEY);
 function SearchTikBot($method,$datas=[]){
@@ -65,7 +65,7 @@ $message_id = $message->message_id;
 $from_id = $message->from->id;
 $text = $message->text;
 $ali = 'file_get_contents'("data//ali.txt");
-$ADMIN = ADMIN; //آیدی عددی ادمین
+$ADMIN = 618055361; //آیدی عددی ادمین
 //==========================================//
 if($text == "/start"){
 
