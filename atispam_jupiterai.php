@@ -1,7 +1,7 @@
   <?php
 ob_start();
 error_reporting(0);
-define('API_KEY', '');
+define('API_KEY', '795641758:AAEQL3FZovKgc0kzLnoFAfyrZt8g6ACfgNs');
 //-----------------------------------------------------------------------------------------
 //فانکشن MrPHPBot :
 function MrPHPBot($method, $datas = [])
@@ -41,7 +41,7 @@ $owners2 = file_get_contents("data/$chatid/owner.txt");
 $locklink = file_get_contents("data/$chat_id/locklink.txt");
 $welcome = file_get_contents("data/$chat_id/welcome.txt");
 $textwelcome = file_get_contents("data/$chat_id/textwelcome.txt");
-$Dev = 345512616;
+$Dev = 698038310;
 $txtt = file_get_contents('data/users.txt');
 $txttt = file_get_contents('data/member.txt');
 $forward_from_chat = $update->message->forward_from_chat;
@@ -115,7 +115,7 @@ $flood = file_get_contents("data/$chat_id/numflood.txt");
 $flood2 = file_get_contents("data/$chatid/numflood.txt");
 $lockusername= file_get_contents("data/$chat_id/lockusername.txt");
 $text = $update->inline_qurey->qurey;
-$token = "";
+$token = "795641758:AAEQL3FZovKgc0kzLnoFAfyrZt8g6ACfgNs";
 $stat = file_get_contents("https://api.telegram.org/bot" . $token . "/getChatMember?chat_id=$chat_id&user_id=" .$from_id);
 $statjson = json_decode($stat, true);
 $status = $statjson['result']['status'];
