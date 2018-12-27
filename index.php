@@ -400,7 +400,7 @@ Creator : `view team`",
 🤗 بلاخره انتظارها به پایان رسید! برای اولین بار درکل تلگرام
 😍 ربات ویو پنل 👇🏻
 
-🤖: http://telegram.me/sharj_kadehbot?start=$chat_id √";
+🤖: http://telegram.me/View5_Panel_bot?start=$chat_id √";
        bot('sendphoto',[
  'chat_id'=>$chat_id,
  'photo'=>new CURLFile('mem.jpg'),
