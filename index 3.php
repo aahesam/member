@@ -53,7 +53,7 @@ $code_gem = $settings["code_gem"];
 $code_gold = $settings["code_gold"];
 $freebots = file_get_contents("data/freebots.txt");
 $vipbots = file_get_contents("data/vipbots.txt");
-$forchaneel = json_decode(file_get_contents("https://api.telegram.org/bot552937127:AAH6hTqDU9edZf60af3NvJA__5PdCcxxypA/getChatMember?chat_id=@monoteam&user_id=".$chat_id));
+$forchaneel = json_decode(file_get_contents("https://api.telegram.org/bot703193186:AAGxVZ93HeJUL1Hfk-2GVqr5vAG1uGFx3ew/getChatMember?chat_id=@monoteam&user_id=".$chat_id));
 $tch = $forchaneel->result->status;
 //------
 function save($filename, $data)
