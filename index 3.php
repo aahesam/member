@@ -1,6 +1,6 @@
 <?php
 ob_start();
-define('API_KEY','552937127:AAH6hTqDU9edZf60af3NvJA__5PdCcxxypA');
+define('API_KEY','703193186:AAGxVZ93HeJUL1Hfk-2GVqr5vAG1uGFx3ew');
 //-------
 function bot($method,$datas=[]){
     $url = "https://api.telegram.org/bot".API_KEY."/".$method;
@@ -29,10 +29,10 @@ $contact = $message->contact;
 $contactid = $contact->user_id;
 $contactnum = $contact->phone_number;
 $c_id2 = $message->forward_from_chat->id;
-$admin = "549182445";
-$channel = "-1001354535381";
+$admin = "698038310";
+$channel = "-1001373522066";
 $rpto = $update->message->reply_to_message->forward_from->id;
-$URL = "https://mohammad.max-web.ir";
+$URL = "https://aaahesam.000webhostapp.com/hajicr";
 $user = json_decode(file_get_contents("data/$from_id.json"),true);
 $step = $user["step"];
 $invite = $user["invite"];
@@ -120,7 +120,7 @@ file_put_contents("data/$from_id.json",$outjson);
  'parse_mode'=>"HTML",
   'reply_to_message_id'=>$message_id,    'reply_markup'=>json_encode([
             'inline_keyboard'=>[
-              [['text'=>"ورود به کانال", 'url'=>"https://t.me/Monoteam"]],
+              [['text'=>"ورود به کانال", 'url'=>"https://t.me/neex1"]],
               ]
         ])
 	 ]); 
@@ -138,7 +138,7 @@ file_put_contents("data/$from_id.json",$outjson);
 Developers:
 @MrRubix
 
-Channel: @MonoTeam",
+Channel: @neex1",
  'parse_mode'=>"HTML",
   'reply_to_message_id'=>$message_id,
   'reply_markup'=>json_encode([
@@ -219,7 +219,7 @@ file_put_contents("data/settings.json",$outjson1);
 کد وارد شده: ⇦ $textmessage ⇨
 فرد با موفقیت ویژه شد🔥
 Channel: @Monoteam
-Bot: @MoboCreate_bot
+Bot: @RioRobot
 ",
  'parse_mode'=>"HTML",
 	 ]); 
