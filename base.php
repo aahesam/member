@@ -7,7 +7,7 @@ v.12
 dev : mohammadrezajafari [@mohammadrezajiji]
 */
 ob_start();
-define('API_KEY','477176280:AAHYRL7bNhncter8z_Oru3feJf8elpcT8R4');
+define('API_KEY','617106649:AAFXNnkvNpbjUjf4XGI2foYcR9bXkQEFYF8');
 ini_set("log_errors" , "off");
 //-----------------------------------------------------------------------------------------
 //فانکشن jijibot :
@@ -25,9 +25,9 @@ function jijibot($method,$data){
  }
 //-----------------------------------------------------------------------------------------
 //متغیر ها :
-$Dev = array("130126308","0000000","00000000"); // ایدی ادمین ها را ماننده این الگورتیم بگذارید ادمین اصلی ایدی اول است
-@$usernamebot = "Gigamanagebot"; // دقیق وارد کنید
-@$channel = "Gigateam_bot";
+$Dev = array("698038310","618055361"); // ایدی ادمین ها را ماننده این الگورتیم بگذارید ادمین اصلی ایدی اول است
+@$usernamebot = "ZedRobot"; // دقیق وارد کنید
+@$channel = "Getro";
 @$token = API_KEY;
 //-----------------------------------------------------------------------------------------------
 $update = json_decode(file_get_contents('php://input'));
