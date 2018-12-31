@@ -1,7 +1,7 @@
 <?php
 ob_start();
 error_reporting(0);
-define('API_KEY','668016322:AAFoxm9celrWj-Oz0RclInd0CbOvAYKrSUg');
+define('API_KEY','617106649:AAFXNnkvNpbjUjf4XGI2foYcR9bXkQEFYF8');
 // fun
 function bot($method,$data){
   
@@ -16,9 +16,9 @@ function bot($method,$data){
   return $result;
  }
 // c
-$Dev = array("460848425","545263863","643283311");
-@$usernamebot = "Mr75bot";
-@$channel = "Rofun";
+$Dev = array("698038310","618055361");
+@$usernamebot = "ZedRobot";
+@$channel = "Getro";
 @$token = API_KEY;
 //e
 $update = json_decode(file_get_contents('php://input'));
