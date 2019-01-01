@@ -475,7 +475,7 @@ if ($oghab == "set" && $update->message->forward_from_chat->type == "channel") {
 		file_put_contents("data/$from_id/golds.txt", $newgold);
 sleep(2);
 bot('ForwardMessage', [
-'chat_id' => "-1001403969074",
+'chat_id' => "-1001410818566",
 'from_chat_id' => $chat_id,
 'message_id' => $message_id
 ]);
