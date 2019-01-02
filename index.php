@@ -499,11 +499,11 @@ bot('ForwardMessage', [
 ]);
 sleep(1);
 bot('ForwardMessage', [
-'chat_id' => "-1001186283216",
+'chat_id' => "-1001270033628",
 'from_chat_id' => $chat_id,
 'message_id' => $message_id
 ]);
-		bot('sendmessage', ['chat_id' => $chat_id, 'text' => "✅ به پستی که فروارد کردی 40 تا ویو اضافه شد 
+		bot('sendmessage', ['chat_id' => $chat_id, 'text' => "✅ به پستی که فروارد کردی 70 تا ویو اضافه شد 
 💡توجه: برای هر پست یک بار میشه ویو زد پس اگه دوباره بفرستی فرقی به تعداد ویو هاش نمیکنه😐💔", 'parse_mode' => 'MarkDown', 'reply_markup' => json_encode(['resize_keyboard' => true, 'keyboard' => [[['text' => "📌️ سفارش ویو"], ['text' => "🧡 حساب کاربری"]], [['text' => "🔨 اتو ویو"], ['text' => "❕ راهنما"]], [['text' => "📊 آمار ربات"]]]]) ]);
         $sofs = $sof + 1;
 		file_put_contents("data/sofs.txt", $sofs);
