@@ -6,7 +6,7 @@ V 1.1
 @BotSorce
 Edit : @AmIRAdminPvBot
 */
-define('API_KEY','TOKEN');
+define('API_KEY','[*[*TOKEN*]*]');
 //__________ BotSorce __________
 //فانکشن amirbot :
 function amirbot($method,$datas=[]){
@@ -45,7 +45,7 @@ $owners2= file_get_contents("data/$chatid/owner.txt");
 $locklink= file_get_contents("data/$chat_id/locklink.txt");
 $welcome= file_get_contents("data/$chat_id/welcome.txt");
 $textwelcome= file_get_contents("data/$chat_id/textwelcome.txt");
-$Dev = 00000000;//آیدی عددی ادمین
+$Dev = [*[*ADMIN*]*];//آیدی عددی ادمین
 $txtt = file_get_contents('data/users.txt');
 $forward_from_chat = $update->message->forward_from_chat;
 $from_chat_id = $forward_from_chat->id;
@@ -113,7 +113,7 @@ $floods2= file_get_contents("data/$chatid/lockflood.txt");
 $flood= file_get_contents("data/$chat_id/numflood.txt");
 $flood2= file_get_contents("data/$chatid/numflood.txt");
 $text = $update->inline_qurey->qurey;
-$token = 'TOKEN';//توکن را جایگزین کنید
+$token = '[*[*TOKEN*]*]';//توکن را جایگزین کنید
 $stat = file_get_contents("https://api.telegram.org/bot$token/getChatMember?chat_id=$chat_id&user_id=".$from_id);
 $statjson = json_decode($stat, true);
 $status = $statjson['result']['status'];
@@ -237,7 +237,7 @@ if($textmassage=="/start" && $tc == "private"){
    ['text'=>"اطلاعات گروه 📡",'callback_data'=>'groupe'],['text'=>"راهنمای مدیریتی 🛠",'callback_data'=>'help']
    ],
    [
-['text'=>"کانال ما🆑",'url'=>"https://telegram.me/*CHANNEL*"]//کانال
+['text'=>"کانال ما🆑",'url'=>"https://telegram.me/Getro"]//کانال
   ],
     ]
     ])
@@ -260,7 +260,7 @@ if($textmassage=="/start" && $tc == "private"){
    ['text'=>"اطلاعات گروه 📡",'callback_data'=>'groupe'],['text'=>"راهنمای مدیریتی 🛠",'callback_data'=>'help']
    ],
    [
-['text'=>"کانال ما🆑",'url'=>"https://telegram.me/*CHANNEL*"]//کانال
+['text'=>"کانال ما🆑",'url'=>"https://telegram.me/Getro"]//کانال
   ],
   	]
   	])
@@ -3756,11 +3756,11 @@ elseif ($text == "ads") {
 داراي عمليات پيغام خوش امدگويي
 و...
 ➖➖➖
-*BotSorce AntiSpamBot*"],
+*Zrubot AntiSpamBot*"],
             'reply_markup' => [
                 'inline_keyboard' => [
                     [
-                        ['text' => "عضویت در ربات", 'url' => 'https://telegram.me/*BOT*']
+                        ['text' => "عضویت در ربات", 'url' => 'https://telegram.me/Zrubot']
                     ],
                     [
                         ['text' => "اشتراک با دیگران", 'switch_inline_query' => 'ads']
