@@ -11,7 +11,7 @@ ob_start();
 @amir_social
 */
 
-$API_KEY = 'TOKEN'; //توکن را ست کنید
+$API_KEY = '754351894:AAG5utzXMQV3FtQCBiZbUASuUk1B7tLDP50'; //توکن را ست کنید
 ##------------------------------##
 define('API_KEY',$API_KEY);
 function bot($method,$datas=[]){
@@ -155,7 +155,7 @@ $messageid = $update->callback_query->message->message_id;
 $forchaneel = json_decode(file_get_contents("https://api.telegram.org/bot$API_KEY/getChatMember?chat_id=@IDCHANNEL&user_id=".$from_id)); // ایدی کانالتون رو ست کنید
 $tch = $forchaneel->result->status;
 $type = $update->message->chat->type;
-$ADMIN = 381292768;//ایدی  عددی سودو رو ست کنید
+$ADMIN = 618055361;//ایدی  عددی سودو رو ست کنید
 $get = file_get_contents("https://api.telegram.org/bot$API_KEY/getChatMember?chat_id=$chat_id&user_id=".$from_id);
 $info = json_decode($get, true);
 $rank = $info['result']['status'];
@@ -186,7 +186,7 @@ $danestani  = file_get_contents("https://amirr.xyzhost.cf/danestani.php");
 @$warntime = file_get_contents("data/$chat_id/warntime.txt");
 $floods= file_get_contents("data/$chat_id/lockflood.txt");
 $flood= file_get_contents("data/$chat_id/numflood.txt");
-$token = 'TOKEN';//توکن رو ست کنید
+$token = '754351894:AAG5utzXMQV3FtQCBiZbUASuUk1B7tLDP50';//توکن رو ست کنید
 //charge
 $time_zone = '12600';
 $today = date("Y-m-d", time()+$time_zone);
@@ -202,7 +202,7 @@ if($tch != 'member' && $tch != 'creator' && $tch != 'administrator'){
 /start
 را بزنید.↖️
 ایدی کانال ما:
-🆔 : @SOCIAL_PROGRAMMING");
+🆔 : @Getro");
   }
 elseif(($text == '/start' || $text == "/شروع")&& $type == "private"){
 $user = file_get_contents('Member.txt');
@@ -232,11 +232,11 @@ if($data == 'more'){
         'parse_mode'=>"html",
         'reply_markup'=>json_encode([
             'inline_keyboard'=>[
-              [['text'=>"😂همسر بین😂",'url'=>"http://telegram.me/hamsarbin_bot"]],
-			  [['text'=>"📫پیام رسان ساز📫",'url'=>"http://telegram.me/pvresan_saz_robot"]],
-			  [['text'=>"📡تبچی ساز📡",'url'=>"http://telegram.me/tabchi_creator_bot"]],
-			  [['text'=>"📞جهت ارتباط با ما📞",'url'=>"http://telegram.me/suppor_sc_bot"]],
-			  [['text'=>"🌹کانال تیممون🌹",'url'=>"http://telegram.me/SOCIAL_PROGRAMMING"]],
+              [['text'=>"دکتر آنلاین",'url'=>"http://telegram.me/Doctor_onlinee"]],
+			  [['text'=>"ضد لینک دیگر ما",'url'=>"http://telegram.me/ZedRobot"]],
+			  [['text'=>"دنده ۵",'url'=>"http://telegram.me/Dandeeh5"]],
+			  [['text'=>"📞جهت ارتباط با ما📞",'url'=>"http://telegram.me/poshtibani_zedrobot"]],
+			  [['text'=>"🌹کانال ما🌹",'url'=>"http://telegram.me/Getro"]],
               ],'resize_keyboard'=>true
         ])
             ]);
@@ -290,7 +290,7 @@ if($bcpv == "bc" && $chat_id == $ADMIN){
 	SendAction($chat_id,'typing');
 	bot('sendmessage',[
     'chat_id'=>$chat_id,
-    'text'=>" کاری از    @lyou4ul .پیام شما ارسال شد",
+    'text'=>" کاری از    @bogifa .پیام شما ارسال شد",
   ]);
 	$all_member = fopen( "Member.txt", "r");
 		while( !feof( $all_member)) {
@@ -316,7 +316,7 @@ if($bcgap == "bc" && $chat_id == $ADMIN){
 	SendAction($chat_id,'typing');
 	bot('sendmessage',[
     'chat_id'=>$chat_id,
-    'text'=>" کاری از    @lyou4ul .پیام شما ارسال شد",
+    'text'=>" کاری از    @bogifa .پیام شما ارسال شد",
   ]);
 	$all_member = fopen( "gaps.txt", "r");
 		while( !feof( $all_member)) {
@@ -404,7 +404,7 @@ $hh = $shetmsg;
  bot('editMessageText',[
  'chat_id'=>$chat_id,
  'message_id'=>$hh,
- 'text'=>'create by: @social_programming'
+ 'text'=>'create by: @Getro'
  ]);
  sleep('3');
  bot('editMessageText',[
@@ -413,8 +413,8 @@ $hh = $shetmsg;
  'text'=>"♻️ Group has been added.
 please send /help for getting help bot.
 ➖➖➖➖➖➖➖➖
-🆔: @social_programming
-🆔: @amir_social"
+🆔: @Getro
+🆔: @bogifa"
  ]); 
    
   bot('sendMessage',[
@@ -434,14 +434,14 @@ sendmessage($chat_id,"
 〰〰〰〰〰〰〰〰
 🗯The robot is already in the group, the robot was is no longer need to do not
 ➖➖➖➖➖➖➖➖
-🆔:  @social_programming
-🆔: @amir_social
+🆔:  @Getro
+🆔: @bogifa
 ");
 }
 }else{
 SendMessage($chat_id,"شما مدیر نمیباشید
 جهت خرید ربات به ایدی  زیر مراجعه 
-@amir_social");
+@poshtibani_zedrobot");
 }
 }
 if($text == '/rem' || $text == "/برداشتن" ){
@@ -454,8 +454,8 @@ if($from_id == $ADMIN && $type == "supergroup"  ){
       'text'=>"
 *#》Gяσυρ нαѕ вєєη яємσνє∂✅*
 ➖➖➖➖➖➖➖➖
-🆔: @social\_programming
-🆔: @amir\_social
+🆔: @Getro
+🆔: @bogifa
 ",
       'parse_mode'=>'MarkDown',
     ]);
@@ -531,9 +531,9 @@ Special command for group manage
 social command to fun
 +=+=+=+=+=+=+=+
 🎗Channel🎗:
-🆔: @Social_Programming
+🆔: @Getro
 🍃Manager🍃:
-🆔: @Amir_Social",
+🆔: @bogifa",
     'parse_mode'=>'html',
     ]);
 }  
@@ -569,9 +569,9 @@ bot('sendMessage',[
 
 +=+=+=+=+=+=+=+
 🎗Channel🎗:
-🆔: @Social_Programming
+🆔: @Getro
 🍃Manager🍃:
-🆔: @Amir_Social",
+🆔: @bogifa",
     'parse_mode'=>'html',
     ]);
 }  
@@ -604,8 +604,8 @@ bot('sendMessage',[
 +=+=+=+=+=+=+=+
 helper for settings : /option
 
-🎗Channel🎗: 🆔: @Social\_Programming
-🍃Manager🍃: 🆔: @Amir\_Social",
+🎗Channel🎗: 🆔: @Getro
+🍃Manager🍃: 🆔: @bogifa",
     'parse_mode'=>'MarkDown',
     ]);
 }  
@@ -642,8 +642,8 @@ bot('sendMessage',[
 برای نمایش تنظیمات به صورت شیشه ای:
 /گزینه
 
-🎗Channel🎗: 🆔: @Social\_Programming
-🍃Manager🍃: 🆔: @Amir\_Social",
+🎗Channel🎗: 🆔: @Getro
+🍃Manager🍃: 🆔: @bogifa",
     'parse_mode'=>'MarkDown',
     ]);
 }  
@@ -688,9 +688,9 @@ bot('sendMessage',[
 🔲#》 /remtimechat
 
 🎗Channel🎗:
-🆔: @Social_Programming
+🆔: @Getro
 🍃Manager🍃:
-🆔: @Amir_Social
+🆔: @bogifa
 ",
     'parse_mode'=>'html',
     ]);
@@ -742,9 +742,9 @@ bot('sendMessage',[
 ☝🏽️English☝🏽️
 
 *🎗Channel🎗:*
-🆔: @Social\_Programming
+🆔: @Getro
 *🍃Manager🍃:*
-🆔: @Amir\_Social",
+🆔: @bogifa",
     'parse_mode'=>'MarkDown',
     ]);
 }  
@@ -848,9 +848,9 @@ bot('sendMessage',[
 /setwarn عدد مورد نظر
  
 🎗Channel🎗:
-🆔: @Social_Programming
+🆔: @Getro
 🍃Manager🍃:
-🆔: @Amir_Social
+🆔: @bogifa
 ",
     'parse_mode'=>'html',
     ]);
@@ -910,9 +910,9 @@ bot('sendMessage',[
 |_》📟Expire = { $expire } ]
 ➖➖➖➖➖➖➖➖➖➖
 🎗Channel🎗: 
-🆔: @Social_Programming
+🆔: @Getro
 🍃Manager🍃: 
-🆔: @Amir_Social
+🆔: @bogifa
 	",
    'parse_mode'=>'html',
     ]);
@@ -969,9 +969,9 @@ bot('sendMessage',[
 |_》📟انقضا گروه = { $expire } ]
 ـ➖➖➖➖➖➖➖➖➖➖
 🎗کانال ما🎗: 
-🆔: @Social_Programming
+🆔: @Getro
 🍃مدیر🍃: 
-🆔: @Amir_Social
+🆔: @bogifa
 	",
    'parse_mode'=>'html',
     ]);
@@ -2455,14 +2455,14 @@ sendmessage($chat_id,"
 +  version:4.6 +   
 به نام خدا 
 کاری از تیم برنامه نویسی اجتماعی
-@social_programming
+@Getro
 نوشته شده توسط
-@amir_social
+@bogifa
 با تشکر از 
-@aliaz003
+دوستان عزیز
 بابت متن های جدید
-تشکر از مهدی بخاطر بیس انتی فلود
-و تشکر از محمد بخاطر بیس شارژ گروه
+بیس انتی فلود
+و بخاطر بیس شارژ گروه
 -------------
 بعد از این نسخه
 چند تیکه کد
@@ -2470,7 +2470,7 @@ sendmessage($chat_id,"
 جهت فیلتر کلمات و ادد اجباری در گروه به سورس اضافه خواهد شد و دیگر اپدیتی ارائه نخواهد داده شد
 ------------
 و سورس  جدیدی با نام کلاسیک 
-(سوشال2)
+(زدروبوت۲)
 با امکانات بی نظیری و پایگاه داده جیسون 
 عرضه خواهد شد.
 تشکر از همه کسانی که از سورس استفاده و با این کارشون از ما حمایت میکنند. ");
@@ -2667,7 +2667,7 @@ if($step2 == "google")
 				'chat_id'=>$chat_id,
 				'text'=>"
 				کانال ما:
-				🆔: @Social\_Programming
+				🆔: @Getro
 				[$text](http://lmgtfy.com/?q=$text).
 				",
 				'parse_mode'=>"MarkDown",
@@ -2692,7 +2692,7 @@ if($step2 == "bing")
 			'chat_id'=>$chat_id,
 				'text'=>"
 				کانال ما:
-				🆔: @Social\_Programming
+				🆔: @Getro
 				[$text](http://lmgtfy.com/?s=b&q=$text).
 				",
 				'parse_mode'=>"MarkDown",
@@ -2724,11 +2724,11 @@ if($text == '/ping' )
     {
         bot('sendMessage',[
             'chat_id'=>$chat_id,
-            'text'=>"[⚜️](http://telegram.me/social_programming) bot is online! ",
+            'text'=>"bot is online! ",
       'parse_mode'=>'MarkDown',
             'reply_markup'=>json_encode([
             'inline_keyboard'=>[
-            [['text'=>"🎗کانال ما🎗",'url'=>"http://telegram.me/social_programming"]],
+            [['text'=>"🎗کانال ما🎗",'url'=>"http://telegram.me/Getro"]],
             ]
             ])
         ]);
@@ -2741,12 +2741,12 @@ if($text == '/ping2')
 		bot('sendMessage',[
 			'chat_id'=>$chat_id,
 			'text'=>"
-`social is online`
+`ZED is online`
 *__________________*
 🎗کانال ما🎗: 
-🆔: @Social\_Programming
+🆔: @Getro
 🍃مدیر🍃: 
-🆔: @Amir\_Social",
+🆔: @bogifa",
 			'parse_mode'=>'MarkDown',
 		]);
 	}
@@ -2968,7 +2968,7 @@ create by :
 			  [['text'=>"🤔راهنما🤔",'callback_data'=>"help"],['text'=>"🏵درباره ما🏵",'callback_data'=>"infodev"]], 
 	//		  [['text'=>"	👇دریافت تنظیمات فلود👇	",'callback_data'=>"null"]],
               [['text'=>"☣️فلود☣️",'callback_data'=>"lockflood"]],        
-              [['text'=>"🎗 کانال ما",'url'=>"https://telegram.me/social_programming"],['text'=>"✖️خروج✖️",'callback_data'=>"endd"]]       		  
+              [['text'=>"🎗 کانال ما",'url'=>"https://telegram.me/Getro"],['text'=>"✖️خروج✖️",'callback_data'=>"endd"]]       		  
 			  ],'resize_keyboard'=>true
 			])
 		]);
@@ -2994,7 +2994,7 @@ create by :
 			  [['text'=>"🤔راهنما🤔",'callback_data'=>"help"],['text'=>"🏵درباره ما🏵",'callback_data'=>"infodev"]], 
 	//		  [['text'=>"	👇دریافت تنظیمات فلود👇	",'callback_data'=>"null"]],
               [['text'=>"☣️فلود☣️",'callback_data'=>"lockflood"]],        
-              [['text'=>"🎗 کانال ما",'url'=>"https://telegram.me/social_programming"],['text'=>"✖️خروج✖️",'callback_data'=>"endd"]]          
+              [['text'=>"🎗 کانال ما",'url'=>"https://telegram.me/Getro"],['text'=>"✖️خروج✖️",'callback_data'=>"endd"]]          
               ]
         ])
             ]);
@@ -3015,13 +3015,13 @@ if($rank_ == "creator" or $rank_ == "administrator"){
 به پنل مدیریتی خوش اومدین
 لطفا یکی از گزینه های زیر رو انتخاب کنید.			
 create by :
-@social_programming
+@Getro
 ",
         'parse_mode'=>"html",
         'reply_markup'=>json_encode([
             'inline_keyboard'=>[
 			  [['text'=>"⚜️تنظیمات رسانه⚜️",'callback_data'=>"helpmedd"],['text'=>"🔐تنظیمات قفل🔐",'callback_data'=>"helpother"]], 
-              [['text'=>"🎗 کانال ما",'url'=>"https://telegram.me/social_programming"],['text'=>"✖️خروج✖️",'callback_data'=>"endd"]],
+              [['text'=>"🎗 کانال ما",'url'=>"https://telegram.me/Getro"],['text'=>"✖️خروج✖️",'callback_data'=>"endd"]],
               [['text'=>"🔙برگشت🔙",'callback_data'=>"back"]],			  
               ]
         ])
@@ -3044,14 +3044,14 @@ if($data == "infodev")
 +  version:4.6 +   
 به نام خدا 
 کاری از تیم برنامه نویسی اجتماعی
-@social_programming
+@Getro
 نوشته شده توسط
-@amir_social
+@bogifa
 با تشکر از 
-@aliaz003
+دوستان عزیز
 بابت متن های جدید
-تشکر از مهدی بخاطر بیس انتی فلود
-و تشکر از محمد بخاطر بیس شارژ گروه
+ بیس انتی فلود
+و بخاطر بیس شارژ گروه
 -------------
 بعد از این نسخه
 چند تیکه کد
@@ -3059,7 +3059,7 @@ if($data == "infodev")
 جهت فیلتر کلمات و ادد اجباری در گروه به سورس اضافه خواهد شد و دیگر اپدیتی ارائه نخواهد داده شد
 ------------
 و سورس  جدیدی با نام کلاسیک 
-(سوشال2)
+(زد روبوت ۲)
 با امکانات بی نظیری و پایگاه داده جیسون 
 عرضه خواهد شد.
 تشکر از همه کسانی که از سورس استفاده و با این کارشون از ما حمایت میکنند.
@@ -3104,9 +3104,9 @@ Special command for group manage
 social command to fun
 +=+=+=+=+=+=+=+
 🎗Channel🎗:
-🆔: @Social_Programming
+🆔: @Getro
 🍃Manager🍃:
-🆔: @Amir_Social
+🆔: @bogifa
 ",
         'parse_mode'=>"html",
         'reply_markup'=>json_encode([
@@ -3129,7 +3129,7 @@ social command to fun
 به پنل مدیریتی خوش اومدین
 لطفا یکی از گزینه های زیر رو انتخاب کنید.			
 create by :
-@social_programming
+@Getro
 کاهش یافت✔️",
              'reply_markup'=>json_encode([
                  'inline_keyboard'=>[
@@ -3140,7 +3140,7 @@ create by :
                    ['text'=>"➖",'callback_data'=>'f-'],['text'=>"$floodnew1",'callback_data'=>"numflood"],['text'=>"➕",'callback_data'=>'f+']
                    ],
 				   				   [
-				   ['text'=>"🎗 کانال ما",'url'=>"https://telegram.me/social_programming"],['text'=>"🔙برگشت🔙",'callback_data'=>"back"]
+				   ['text'=>"🎗 کانال ما",'url'=>"https://telegram.me/Getro"],['text'=>"🔙برگشت🔙",'callback_data'=>"back"]
 				   ],
                     ]
              ])
@@ -3159,7 +3159,7 @@ create by :
 به پنل مدیریتی خوش اومدین
 لطفا یکی از گزینه های زیر رو انتخاب کنید.			
 create by :
-@social_programming
+@Getro
 افزایش یافت✔️",
              'reply_markup'=>json_encode([
                  'inline_keyboard'=>[
@@ -3170,7 +3170,7 @@ create by :
                    ['text'=>"➖",'callback_data'=>'f-'],['text'=>"$floodne2",'callback_data'=>"numflood"],['text'=>"➕",'callback_data'=>'f+']
                    ],
 				   				   [
-				   ['text'=>"🎗 کانال ما",'url'=>"https://telegram.me/social_programming"],['text'=>"🔙برگشت🔙",'callback_data'=>"back"]
+				   ['text'=>"🎗 کانال ما",'url'=>"https://telegram.me/Getro"],['text'=>"🔙برگشت🔙",'callback_data'=>"back"]
 				   ],
                     ]
              ])
@@ -3197,7 +3197,7 @@ create by :
                    ['text'=>"➖",'callback_data'=>'f-'],['text'=>"$flood2",'callback_data'=>"numflood"],['text'=>"➕",'callback_data'=>'f+']
                    ],
 				   				   [
-				   ['text'=>"🎗 کانال ما",'url'=>"https://telegram.me/social_programming"],['text'=>"🔙برگشت🔙",'callback_data'=>"back"]
+				   ['text'=>"🎗 کانال ما",'url'=>"https://telegram.me/Getro"],['text'=>"🔙برگشت🔙",'callback_data'=>"back"]
 				   ],
                     ]
              ])
@@ -3212,7 +3212,7 @@ create by :
 به پنل مدیریتی خوش اومدین
 لطفا یکی از گزینه های زیر رو انتخاب کنید.			
 create by :
-@social_programming",
+@bogifa",
              'reply_markup'=>json_encode([
                  'inline_keyboard'=>[
                    [
@@ -3222,7 +3222,7 @@ create by :
                    ['text'=>"➖",'callback_data'=>'f-'],['text'=>"$flood2",'callback_data'=>"numflood"],['text'=>"➕",'callback_data'=>'f+']
                    ],
 				   				   [
-				   ['text'=>"🎗 کانال ما",'url'=>"https://telegram.me/social_programming"],['text'=>"🔙برگشت🔙",'callback_data'=>"back"]
+				   ['text'=>"🎗 کانال ما",'url'=>"https://telegram.me/Getro"],['text'=>"🔙برگشت🔙",'callback_data'=>"back"]
 				   ],
                     ]
              ])
@@ -3296,7 +3296,7 @@ create by :
   'text'=>"به پنل مدیریتی خوش اومدین
 لطفا یکی از گزینه های زیر رو انتخاب کنید.			
 create by :
-@social_programming",
+@Getro",
 	'reply_markup'=>json_encode([
 	'resize_keyboard'=>true,
 	'inline_keyboard'=>[
@@ -3342,7 +3342,7 @@ create by :
              'text'=>"به پنل مدیریتی خوش اومدین
 لطفا یکی از گزینه های زیر رو انتخاب کنید.			
 create by :
-@social_programming
+@Getro
 قفل عکس غیر فعال شد❌",
              'reply_markup'=>json_encode([
                  'inline_keyboard'=>[
@@ -3392,7 +3392,7 @@ create by :
              'text'=>"به پنل مدیریتی خوش اومدین
 لطفا یکی از گزینه های زیر رو انتخاب کنید.			
 create by :
-@social_programming
+@Getro
 قفل عکس فعال شد✅",
              'reply_markup'=>json_encode([
                  'inline_keyboard'=>[
@@ -3442,7 +3442,7 @@ create by :
              'text'=>"به پنل مدیریتی خوش اومدین
 لطفا یکی از گزینه های زیر رو انتخاب کنید.			
 create by :
-@social_programming
+@Getro
 قفل ویدیو غیر فعال شد❌",
              'reply_markup'=>json_encode([
                  'inline_keyboard'=>[
@@ -3493,7 +3493,7 @@ create by :
              'text'=>"به پنل مدیریتی خوش اومدین
 لطفا یکی از گزینه های زیر رو انتخاب کنید.			
 create by :
-@social_programming
+@Getro
 قفل ویدیو فعال شد✅",
              'reply_markup'=>json_encode([
                  'inline_keyboard'=>[
@@ -3544,7 +3544,7 @@ create by :
              'text'=>"به پنل مدیریتی خوش اومدین
 لطفا یکی از گزینه های زیر رو انتخاب کنید.			
 create by :
-@social_programming
+@Getro
 قفل اینلاین غیر فعال شد❌",
              'reply_markup'=>json_encode([
                  'inline_keyboard'=>[
@@ -3595,7 +3595,7 @@ create by :
              'text'=>"به پنل مدیریتی خوش اومدین
 لطفا یکی از گزینه های زیر رو انتخاب کنید.			
 create by :
-@social_programming
+@Getro
 قفل اینلاین فعال شد✅",
              'reply_markup'=>json_encode([
                  'inline_keyboard'=>[
@@ -3646,7 +3646,7 @@ create by :
              'text'=>"به پنل مدیریتی خوش اومدین
 لطفا یکی از گزینه های زیر رو انتخاب کنید.			
 create by :
-@social_programming
+@Getro
 قفل استیکر غیر فعال شد❌",
              'reply_markup'=>json_encode([
                  'inline_keyboard'=>[
@@ -3697,7 +3697,7 @@ create by :
              'text'=>"به پنل مدیریتی خوش اومدین
 لطفا یکی از گزینه های زیر رو انتخاب کنید.			
 create by :
-@social_programming
+@Getro
 قفل استیکر فعال شد✅",
              'reply_markup'=>json_encode([
                  'inline_keyboard'=>[
@@ -3748,7 +3748,7 @@ create by :
              'text'=>"به پنل مدیریتی خوش اومدین
 لطفا یکی از گزینه های زیر رو انتخاب کنید.			
 create by :
-@social_programming
+@Getro
 قفل ویس غیر فعال شد❌",
              'reply_markup'=>json_encode([
                  'inline_keyboard'=>[
@@ -3799,7 +3799,7 @@ create by :
              'text'=>"به پنل مدیریتی خوش اومدین
 لطفا یکی از گزینه های زیر رو انتخاب کنید.			
 create by :
-@social_programming
+@Getro
 قفل ویس فعال شد✅",
              'reply_markup'=>json_encode([
                  'inline_keyboard'=>[
@@ -3850,7 +3850,7 @@ create by :
              'text'=>"به پنل مدیریتی خوش اومدین
 لطفا یکی از گزینه های زیر رو انتخاب کنید.			
 create by :
-@social_programming
+@Getro
 قفل اهنگ غیر فعال شد❌",
              'reply_markup'=>json_encode([
                  'inline_keyboard'=>[
@@ -3901,7 +3901,7 @@ create by :
              'text'=>"به پنل مدیریتی خوش اومدین
 لطفا یکی از گزینه های زیر رو انتخاب کنید.			
 create by :
-@social_programming
+@Getro
 قفل اهنگ فعال شد✅",
              'reply_markup'=>json_encode([
                  'inline_keyboard'=>[
@@ -3952,7 +3952,7 @@ create by :
              'text'=>"به پنل مدیریتی خوش اومدین
 لطفا یکی از گزینه های زیر رو انتخاب کنید.			
 create by :
-@social_programming
+@Getro
 قفل فوروارد غیر فعال شد❌",
              'reply_markup'=>json_encode([
                  'inline_keyboard'=>[
@@ -3998,7 +3998,7 @@ create by :
              'text'=>"به پنل مدیریتی خوش اومدین
 لطفا یکی از گزینه های زیر رو انتخاب کنید.			
 create by :
-@social_programming
+@Getro
 قفل فوروارد فعال شد✅
 ",
              'reply_markup'=>json_encode([
@@ -4045,7 +4045,7 @@ create by :
              'text'=>"به پنل مدیریتی خوش اومدین
 لطفا یکی از گزینه های زیر رو انتخاب کنید.			
 create by :
-@social_programming
+@Getro
 قفل ارسال مخاطب غیر فعال شد❌",
              'reply_markup'=>json_encode([
                  'inline_keyboard'=>[
@@ -4096,7 +4096,7 @@ create by :
              'text'=>"به پنل مدیریتی خوش اومدین
 لطفا یکی از گزینه های زیر رو انتخاب کنید.			
 create by :
-@social_programming
+@Getro
 قفل ارسال مخاطب فعال شد✅",
              'reply_markup'=>json_encode([
                  'inline_keyboard'=>[
@@ -4147,7 +4147,7 @@ create by :
              'text'=>"به پنل مدیریتی خوش اومدین
 لطفا یکی از گزینه های زیر رو انتخاب کنید.			
 create by :
-@social_programming
+@Getro
 قفل ارسال مکان غیر فعال شد❌",
              'reply_markup'=>json_encode([
                  'inline_keyboard'=>[
@@ -4197,7 +4197,7 @@ create by :
              'text'=>"به پنل مدیریتی خوش اومدین
 لطفا یکی از گزینه های زیر رو انتخاب کنید.			
 create by :
-@social_programming
+@Getro
 قفل ارسال مکان فعال شد✅",
              'reply_markup'=>json_encode([
                  'inline_keyboard'=>[
@@ -4249,7 +4249,7 @@ create by :
              'text'=>"به پنل مدیریتی خوش اومدین
 لطفا یکی از گزینه های زیر رو انتخاب کنید.			
 create by :
-@social_programming
+@Getro
 قفل ویرایش متن غیر فعال شد❌",
              'reply_markup'=>json_encode([
                  'inline_keyboard'=>[
@@ -4294,7 +4294,7 @@ create by :
              'text'=>"به پنل مدیریتی خوش اومدین
 لطفا یکی از گزینه های زیر رو انتخاب کنید.			
 create by :
-@social_programming
+@Getro
 قفل ویرایش متن فعال شد✅
 ",
              'reply_markup'=>json_encode([
@@ -4340,7 +4340,7 @@ create by :
              'text'=>"به پنل مدیریتی خوش اومدین
 لطفا یکی از گزینه های زیر رو انتخاب کنید.			
 create by :
-@social_programming
+@Getro
 قفل ارسال هشتگ و یوزرنیم غیر فعال شد❌",
              'reply_markup'=>json_encode([
                  'inline_keyboard'=>[
@@ -4385,7 +4385,7 @@ create by :
              'text'=>"به پنل مدیریتی خوش اومدین
 لطفا یکی از گزینه های زیر رو انتخاب کنید.			
 create by :
-@social_programming
+@Getro
 قفل ارسال یوزرنیم و تگ فعال شد✅",
              'reply_markup'=>json_encode([
                  'inline_keyboard'=>[
@@ -4430,7 +4430,7 @@ create by :
              'text'=>"به پنل مدیریتی خوش اومدین
 لطفا یکی از گزینه های زیر رو انتخاب کنید.			
 create by :
-@social_programming
+@Getro
 قفل لینک  غیر فعال شد❌",
              'reply_markup'=>json_encode([
                  'inline_keyboard'=>[
@@ -4475,7 +4475,7 @@ create by :
              'text'=>"به پنل مدیریتی خوش اومدین
 لطفا یکی از گزینه های زیر رو انتخاب کنید.			
 create by :
-@social_programming
+@Getro
 قفل لینک فعال شد✅",
              'reply_markup'=>json_encode([
                  'inline_keyboard'=>[
@@ -4520,7 +4520,7 @@ create by :
              'text'=>"به پنل مدیریتی خوش اومدین
 لطفا یکی از گزینه های زیر رو انتخاب کنید.			
 create by :
-@social_programming
+@Getro
 قفل باتی دیگر غیر فعال شد ❌
 ",
              'reply_markup'=>json_encode([
@@ -4565,7 +4565,7 @@ create by :
              'text'=>"به پنل مدیریتی خوش اومدین
 لطفا یکی از گزینه های زیر رو انتخاب کنید.			
 create by :
-@social_programming
+@Getro
 قفل باتی دیگر فعال شد ✅",
              'reply_markup'=>json_encode([
                  'inline_keyboard'=>[
@@ -4609,7 +4609,7 @@ create by :
              'text'=>"به پنل مدیریتی خوش اومدین
 لطفا یکی از گزینه های زیر رو انتخاب کنید.			
 create by :
-@social_programming
+@Getro
 قفل فارسی غیر فعال شد ❌
 ",
              'reply_markup'=>json_encode([
@@ -4655,7 +4655,7 @@ create by :
              'text'=>"به پنل مدیریتی خوش اومدین
 لطفا یکی از گزینه های زیر رو انتخاب کنید.			
 create by :
-@social_programming
+@Getro
 قفل فارسی فعال شد ✅",
              'reply_markup'=>json_encode([
                  'inline_keyboard'=>[
@@ -4700,7 +4700,7 @@ create by :
              'text'=>"به پنل مدیریتی خوش اومدین
 لطفا یکی از گزینه های زیر رو انتخاب کنید.			
 create by :
-@social_programming
+@Getro
 قفل ارسال فایل غیر فعال شد ❌
 ",
              'reply_markup'=>json_encode([
@@ -4750,7 +4750,7 @@ create by :
              'text'=>"به پنل مدیریتی خوش اومدین
 لطفا یکی از گزینه های زیر رو انتخاب کنید.			
 create by :
-@social_programming
+@Getro
 قفل ارسال فایل فعال شد ✅",
              'reply_markup'=>json_encode([
                  'inline_keyboard'=>[
@@ -4800,7 +4800,7 @@ create by :
              'text'=>"به پنل مدیریتی خوش اومدین
 لطفا یکی از گزینه های زیر رو انتخاب کنید.			
 create by :
-@social_programming
+@Getro
 قفل ارسال 🎇 گیف غیر فعال شد ❌
 ",
              'reply_markup'=>json_encode([
@@ -4851,7 +4851,7 @@ create by :
              'text'=>"به پنل مدیریتی خوش اومدین
 لطفا یکی از گزینه های زیر رو انتخاب کنید.			
 create by :
-@social_programming
+@Getro
 قفل ارسال 🎇 گیف فعال شد ✅",
              'reply_markup'=>json_encode([
                  'inline_keyboard'=>[
@@ -4901,7 +4901,7 @@ create by :
              'text'=>"به پنل مدیریتی خوش اومدین
 لطفا یکی از گزینه های زیر رو انتخاب کنید.			
 create by :
-@social_programming
+@Getro
 قفل پیام ورود و خروج غیر فعال شد ❌
 ",
              'reply_markup'=>json_encode([
@@ -4947,7 +4947,7 @@ create by :
              'text'=>"به پنل مدیریتی خوش اومدین
 لطفا یکی از گزینه های زیر رو انتخاب کنید.			
 create by :
-@social_programming
+@Getro
 قفل پیام ورود خروج فعال شد ✅",
              'reply_markup'=>json_encode([
                  'inline_keyboard'=>[
@@ -4992,7 +4992,7 @@ create by :
              'text'=>"به پنل مدیریتی خوش اومدین
 لطفا یکی از گزینه های زیر رو انتخاب کنید.			
 create by :
-@social_programming
+@Getro
 قفل ارسال کلمات انگلیسی غیر فعال شد ❌
 ",
              'reply_markup'=>json_encode([
@@ -5038,7 +5038,7 @@ create by :
              'text'=>"به پنل مدیریتی خوش اومدین
 لطفا یکی از گزینه های زیر رو انتخاب کنید.			
 create by :
-@social_programming
+@Getro
 قفل ارسال کلمات انگلیسی فعال شد ✅",
              'reply_markup'=>json_encode([
                  'inline_keyboard'=>[
