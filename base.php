@@ -8,7 +8,7 @@ dev : mohammadrezajafari [@mohammadrezajiji]
 */
 ob_start();
 error_reporting(0);
-define('API_KEY','462485689:AAH6yhT569pNvUkYqL-RE9QGxQDG35WGh6s');
+define('API_KEY','617106649:AAFXNnkvNpbjUjf4XGI2foYcR9bXkQEFYF8');
 //-----------------------------------------------------------------------------------------
 //فانکشن jijibot :
 function jijibot($method,$data){
@@ -25,9 +25,9 @@ function jijibot($method,$data){
  }
 //-----------------------------------------------------------------------------------------
 //متغیر ها :
-$Dev = array("267785153","0000000","00000000"); // ایدی ادمین ها را ماننده این الگورتیم بگذارید ادمین اصلی ایدی اول است
-@$usernamebot = "GpGrambot"; // دقیق وارد کنید
-@$channel = "gpgram_bot";
+$Dev = array("698038310"); // ایدی ادمین ها را ماننده این الگورتیم بگذارید ادمین اصلی ایدی اول است
+@$usernamebot = "ZedRobot"; // دقیق وارد کنید
+@$channel = "Getro";
 @$token = API_KEY;
 //-----------------------------------------------------------------------------------------------
 $update = json_decode(file_get_contents('php://input'));
