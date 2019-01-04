@@ -232,7 +232,7 @@ $text = $update->message->text;
 $ADMIN= "690654411"; // ایدی ادمین ها را ماننده این الگورتیم بگذارید ادمین
 $user = file_get_contents("Member.txt");
 $tc = $update->message->chat->type;
-$truechannel = json_decode(file_get_contents("https://api.telegram.org/bot789836929:AAHcQI-wUOJ8yIQZbqixfQjvNC96fj6gFeI/getChatMember?chat_id=@Viewpanell&user_id=".$from_id));
+$truechannel = json_decode(file_get_contents("https://api.telegram.org/bot789836929:AAHeLkX9eyKcflagGv1prfzF2S7DVSwJ9S4/getChatMember?chat_id=@Viewpanell&user_id=".$from_id));
 $tch = $truechannel->result->status;
 $first = $update->message->from->first_name;
 $tedad = file_get_contents('data/'.$from_id."/golds.txt");
