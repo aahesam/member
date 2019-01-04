@@ -1,6 +1,6 @@
 <?php
 ob_start();
-define('API_KEY','769652808:AAEDsHcXHO2yAItufM6StulijRzY5IjZ5c');
+define('API_KEY','740521695:AAFPz9eWrypdIU5WsE3F_rDCQXCw3plmNaA');
 ini_set("log_errors","off");
 //-------
 function bot($method,$datas=[]){
@@ -36,7 +36,7 @@ $chat_edit_id = $update->edited_message->chat->id;
 $edit_for_id = $update->edited_message->from->id;
 $database = json_decode(file_get_contents("../data.json"),true);
 $bot_ping = $database["bot"];
-$web_url = "https://sudomortal.000webhostapp.com/Anti/zed";
+$web_url = "https://aaahesam.000webhostapp.com/za";
 //------
 function settings($reloadid,$id){
 $datab = json_decode(file_get_contents("../data/$id.json"),true);
