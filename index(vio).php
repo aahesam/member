@@ -5,7 +5,7 @@ CHANNEL : @view_panell
 */
 unlink(error_log);
 $load = sys_getloadavg();
-$API_KEY = "789836929:AAHcQI-wUOJ8yIQZbqixfQjvNC96fj6gFeI";
+$API_KEY = "789836929:AAHeLkX9eyKcflagGv1prfzF2S7DVSwJ9S4";
 define('API_KEY',$API_KEY);
 
 function bot($method,$datas=[]){
