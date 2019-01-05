@@ -5,7 +5,7 @@
  تشکر از گلد دو 
 */
 ob_start();
-define('API_KEY','توکن ربات');
+define('API_KEY','754351894:AAGmxf0RbdteseqFwDPtx-TtAIKz66l_Ux4');
 //--------------------------------------------------------------------------
 //فانکشن bot :
 function bot($method,$datas=[]){
@@ -44,7 +44,7 @@ $owners2= file_get_contents("data/$chatid/owner.txt");
 $locklink= file_get_contents("data/$chat_id/locklink.txt");
 $welcome= file_get_contents("data/$chat_id/welcome.txt");
 $textwelcome= file_get_contents("data/$chat_id/textwelcome.txt");
-$Dev = ایدی عددی مدیر;
+$Dev = 698038310;
 $txtt = file_get_contents('data/users.txt');
 $forward_from_chat = $update->message->forward_from_chat;
 $from_chat_id = $forward_from_chat->id;
@@ -115,7 +115,7 @@ $flood2= file_get_contents("data/$chatid/numflood.txt");
 $reply = $update->message->reply_to_message;
 $text1 = $message->text;
 $text = $update->inline_qurey->qurey;
-$token = '504283061:AAGt48tQ6PadJ3K7s4otqHT3zOk30e9foB4';
+$token = '754351894:AAGmxf0RbdteseqFwDPtx-TtAIKz66l_Ux4';
 $stat = file_get_contents("https://api.telegram.org/bot$token/getChatMember?chat_id=$chat_id&user_id=".$from_id);
 $statjson = json_decode($stat, true);
 $status = $statjson['result']['status'];
@@ -222,7 +222,7 @@ bot('sendMessage',[
             'inline_keyboard'=>[
               [['text'=>"امکانات بینظیر ربات",'callback_data'=>"a"]],
               [['text'=>"خرید برای گروه",'callback_data'=>"b"]],
-			  [['text'=>'افزودن به گپ','url'=>'https://telegram.me/zes_link_my_bot?startgroup=new']],
+			  [['text'=>'افزودن به گپ','url'=>'https://telegram.me/Zrubot?startgroup=new']],
               ]
         ])
  ]);
@@ -231,12 +231,12 @@ elseif($data1 == "a"){
 bot('editmessagetext',[
               'chat_id'=>$chatid,
    'message_id'=>$messageid,
-             'text'=>"قفل دستورات و امکانات با قابلیت و دستورات فان همین حالا ربات را خریداری کنید @mahdi_yousefii",
+             'text'=>"قفل دستورات و امکانات با قابلیت و دستورات فان همین حالا ربات را خریداری کنید @Poshtibani_Zedrobot",
 'reply_markup'=>json_encode([
             'inline_keyboard'=>[
               [['text'=>"امکانات بینظیر ربات",'callback_data'=>"a"]],
               [['text'=>"خرید برای گروه",'callback_data'=>"b"]],
-			  [['text'=>'افزودن به گپ','url'=>'https://telegram.me/zes_link_my_bot?startgroup=new']],
+			  [['text'=>'افزودن به گپ','url'=>'https://telegram.me/Zrubot?startgroup=new']],
               ]
         ])
  ]);
@@ -245,12 +245,12 @@ elseif($data1 == "b"){
 bot('editmessagetext',[
               'chat_id'=>$chatid,
    'message_id'=>$messageid,
-             'text'=>"برای خرید به ایدی @mahdi_yousefii پیام دهید",
+             'text'=>"برای خرید به ایدی @Poshtibani_Zedrobot پیام دهید",
  'reply_markup'=>json_encode([
             'inline_keyboard'=>[
               [['text'=>"امکانات بینظیر ربات",'callback_data'=>"a"]],
               [['text'=>"خرید برای گروه",'callback_data'=>"b"]],
-			  [['text'=>'افزودن به گپ','url'=>'https://telegram.me/zes_link_my_bot?startgroup=new']],
+			  [['text'=>'افزودن به گپ','url'=>'https://telegram.me/Zrubot?startgroup=new']],
               ]
         ])
  ]);
@@ -288,7 +288,7 @@ if(preg_match('/^\/([Ss]ticker)/',$text1) and $reply){
       $get = bot('getfile',['file_id'=>$file]);
       $patch = $get->result->file_path;
       file_put_contents('Admin/Photo-S.png',file_get_contents('https://api.telegram.org/file/bot'.$token.'/'.$patch));
-      SendSticker($chat_id , new CURLFile('Admin/Photo-S.png') , "@mahdi_yousefii");
+      SendSticker($chat_id , new CURLFile('Admin/Photo.png') , "@bogifa");
     }
   }
   if(preg_match('/^\/([Pp]hoto)/',$text1) and $reply){
@@ -380,7 +380,7 @@ elseif($data=="settings" && $fm == $owners2){
    ['text'=>"اطلاعات گروه👥",'callback_data'=>'groupe'],['text'=>"Help🗣",'callback_data'=>'help']
    ],
    [
-['text'=>"سازنده🔥",'url'=>"https://telegram.me/mahdi_yousefii"]
+['text'=>"سازنده🔥",'url'=>"https://telegram.me/bogifa"]
   ],
     ]
     ])
@@ -403,7 +403,7 @@ elseif($data=="settings" && $fm == $owners2){
    ['text'=>"اطلاعات گروه👥",'callback_data'=>'groupe'],['text'=>"Help🗣",'callback_data'=>'help']
    ],
    [
-['text'=>"سازنده🔥",'url'=>"https://telegram.me/mahdi_yousefii"]
+['text'=>"سازنده🔥",'url'=>"https://telegram.me/bogifa"]
   ],
   	]
   	])
@@ -3329,7 +3329,7 @@ if ($tc == 'group' | $tc == 'supergroup'){
 /photo
 
 ســـازنـــده ربـــــات
-مهدی یوسفی",
+@bogifa",
   'parse_mode'=>'MarkDown',
 	]);
 	}
