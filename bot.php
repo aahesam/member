@@ -131,7 +131,7 @@
 ini_set("log_errors" , "off");
 flush();
 set_time_limit(0);
-define('API_KEY','token');
+define('API_KEY','703193186:AAGxVZ93HeJUL1Hfk-2GVqr5vAG1uGFx3ew');
 date_default_timezone_set('Asia/tehran');
 //======================
 include 'data/jdf.php';
@@ -211,7 +211,22 @@ bot('sendmessage',[
 'reply_to_messageid'=>$message_id,
 'parse_mode'=>"HTML",
 'reply_markup'=>json_encode(['inline_keyboard'=>[
-[['text'=>"💎تیم حرفه ای💎",'url'=>"https://t.me/professionallteam"]],
+[['text'=>"عضویت در کانال اول",'url'=>"https://t.me/Riocreate"], [['text'=>"عضویت در کانال دوم",'url'=>"https://t.me/Dandeeh5]],
+],])
+]);
+}
+	if($tch1 != 'member' && $tch1 != 'creator' && $tch1 != 'administrator'){
+bot('sendmessage',[
+'chat_id'=>$chat_id,
+'text'=>"ربات قفل است🕐✅
+ابتدا در دو کانال زیر عضو شوید💎⚙️
+سپس اجازه ادامه فعالیت در ربات را دارید!🛍
+
+سپس ربات را /start نمایید!💌",
+'reply_to_messageid'=>$message_id,
+'parse_mode'=>"HTML",
+'reply_markup'=>json_encode(['inline_keyboard'=>[
+[['text'=>"عضویت در کانال اول",'url'=>"https://t.me/Riocreate"], ['text'=>"عضویت در کانال دوم",'url'=>"https://t.me/Dandeeh5]],
 ],])
 ]);
 }
