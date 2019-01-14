@@ -131,7 +131,7 @@
 ini_set("log_errors" , "off");
 flush();
 set_time_limit(0);
-define('API_KEY','token');
+define('API_KEY','703193186:AAGxVZ93HeJUL1Hfk-2GVqr5vAG1uGFx3ew');
 date_default_timezone_set('Asia/tehran');
 //======================
 include 'data/jdf.php';
@@ -200,7 +200,7 @@ SendMessage($match[2],"شما موفق به دریافت زیرمجموعه شد
 زمان : $time
 تاریخ : $date","HTML","true");
 }}}}
-	if($tch != 'member' && $tch != 'creator' && $tch != 'administrator'){
+	if($tch != 'member' && $tch != 'creator' && $tch != 'administrator' $tch1 != 'member' && $tch1 != 'creator' && $tch1 != 'administrator'){
 bot('sendmessage',[
 'chat_id'=>$chat_id,
 'text'=>"ربات قفل است🕐✅
@@ -211,7 +211,7 @@ bot('sendmessage',[
 'reply_to_messageid'=>$message_id,
 'parse_mode'=>"HTML",
 'reply_markup'=>json_encode(['inline_keyboard'=>[
-[['text'=>"💎تیم حرفه ای💎",'url'=>"https://t.me/professionallteam"]],
+[['text'=>"کانال یک",'url'=>"https://t.me/Riocreate"], ['text'=>"کانال دو",'url'=>"https://t.me/Dandeeh5]],
 ],])
 ]);
 }
