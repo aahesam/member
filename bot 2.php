@@ -358,15 +358,30 @@ bot('editMessagetext', [
 }
 //=================================================================
 elseif($data == "buyvip"){
+    if($gold > 5){
+    $codeme = rand(0000000,1234567);
+    save("user/$chatid/gold.txt",($gold-5));
 bot('editMessagetext', [
 'chat_id'=>$chatid,
-'text'=>"جهت خرید حساب ویژه با ایدی های زیر یا پشتیبانی داخل ربات در ارتباط باشید🍀
-🎗 @sooroshh
-🎮 @pvvrobot",
+'text'=>"نوبت شما به صورت خودکار زده شد اکنون با استفاده از آن میتوانید با پزشک مورد نظر خود در تماس باشید لذا آنرا یادداشت فرمایید.
+✅ نوبت شما : $codeme",
 'message_id'=>$messageid,
 'parse_mode'=>"HTML",
 'reply_markup'=>$button_backk]);
-}
+save("Code/codeme.txt","$codeme");
+}else{
+    save("Code/codeme.txt","noun");
+    bot('editmessagetext',[
+        'chat_id'=>$chatid,
+        'text'=>"میزان امتیاز شما کافی نمیباشد لطفا از دو روش زیر مجموعه گیری و یا پرداخت مبلغ ۳ هزار تومن نوبت بگیرید.",
+        'message_id'=>$messageid,
+        'parse_mode'=>"HTML",
+        'reply_markup'=>json_encode(['inline_keyboard'=>[
+            [['text'=>"دریافت نوبت 🔖",'callback_data'=>"buyvip"]],
+            [['text'=>"🔙",'callback_data'=>"back"]],
+            ],'resize_keyboard'=>true])
+            ]);
+}}
 /*
 نوشته شده توسط تیم حرفه ای(سروش اس دی)
 تیم حرفه ای: @professionallteam
