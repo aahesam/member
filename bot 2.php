@@ -131,7 +131,7 @@
 ini_set("log_errors" , "off");
 flush();
 set_time_limit(0);
-define('API_KEY','token');
+define('API_KEY','670141983:AAFO4vIv7_xgg1M6DiYT1x84PnTENQqn2Zc');
 date_default_timezone_set('Asia/tehran');
 //======================
 include 'data/jdf.php';
@@ -686,7 +686,7 @@ bot('editMessagetext', [
 elseif($command == 'supp'){
 save("user/$chat_id/command.txt","supp");
 bot('ForwardMessage',[
-'chat_id'=>$admin,
+'chat_id'=> -1001131120424,
 'from_chat_id'=>$from_id,
 'message_id'=>$message_id]);
 bot('sendmessage',[
@@ -705,7 +705,7 @@ bot('sendMessage',[
 $text",
 'parse_mode'=>"HTML"]);
 bot('sendMessage',[
-'chat_id'=>$admin,
+'chat_id'=> -1001131120424,
 'text'=>"پیام شما به فرد ارسال شد✔️",
 'parse_mode'=>"HTML",
 'reply_markup'=>$button_backk]);
