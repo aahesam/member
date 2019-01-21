@@ -155,10 +155,10 @@ elseif(strpos($ban ,"$chatid") !== false && $chatid != $admin) {
 SendMessage($chatid,"شما از سرور ما بلاک شده اید!","HTML","true",$messageid);
 return false;
 }
-
+/*
 elseif($from_id != $chat_id  && $chatid != $admin){
 LeaveChat($chat_id);
-}
+}*/
 //===================================================================
 $timing = date("Y-m-d-h-i-sa");
 $timing = str_replace("am","",$timing);
