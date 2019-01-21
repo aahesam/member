@@ -596,18 +596,10 @@ if($hesab_go != 'ویژه'){
 save("user/$chatid/command.txt","new cd");
 bot('editMessagetext', [
 'chat_id'=>$chatid,
-'text'=>"کدی که در کانال ارسال کردیم را بفرستید↙️",
+'text'=>" لطفا شماره ی ویزیت خود را وارد کنید.↙️",
 'message_id'=>$messageid,
 'parse_mode'=>"HTML",
 'reply_markup'=>$button_backk]);
-}else{
-save("user/$chatid/command.txt","noun");    
-bot('sendmessage',[
-'chat_id'=>$chat_id,
-'text'=>"شما قبلا از کد ویژه استفاده کرده اید یا حساب شما ویژه میباشد🔰",
-'message_id'=>$messageid,
-'parse_mode' => "HTML",
-'reply_markup'=>$button_back]);
 }}
 elseif($command == 'new cd'){
 if($text == "$cdfree"){
@@ -616,15 +608,17 @@ save("Code/codeme.txt","noun");
 save("user/$chatid/hesab_golden.txt","ویژه");
 bot('sendmessage', [
 'chat_id' => $chat_id,
-'text' => "تبریک😊;
-حساب کاربری شما با موفقیت ویژه شد🔅",
+'text' => " شماره ویزیت شما معتبر است و اکنون میتوانید سوال خود را در قالب بک متن با شرح حال کامل(سابقه ی بیماری، سابقه ی مصرف دارو، سابقه ی جراحی،بارداری و ....)ذکر بفرمایید تا پزشک مربوطه آنلاین شود سپس در اصرع وقت پاسخگوی آن خواهد بود.
+با تشکر ",
 'message_id'=>$messageid,
 'parse_mode' => "HTML",
-'reply_markup'=>$button_menu]);
+'reply_markup'=>json_encode(['inline_keyboard'=>[
+    [['text'=>"مشاوره با پزشک",'callback_data'=>"supp"]],
+    ],])
+    ]);
 bot('sendmessage', [
-'chat_id' => -1001365391705,
+'chat_id' => 698038310,
 'text' => "کد حساب ویژه با موفقیت توسط @$username استفاده شد🎊
-
 ◀️آیدی عددی کاربر: $from_id
 ◀️ نام و نام خانوادگی کاربر: $first$last
 ➖➖➖➖➖➖➖➖➖➖➖➖
@@ -632,6 +626,7 @@ bot('sendmessage', [
 ➖➖➖➖➖➖➖➖➖➖➖➖",
 'disable_web_page_preview'=>$disable_web_page_preview,
 'parse_mode' => "HTML"]);
+unlink("user/$chatid/hesab_golden.txt");
 }else{
 save("user/$chat_id/command.txt","noun");    
 bot('sendmessage', [
@@ -689,7 +684,7 @@ bot('editMessagetext', [
 'reply_markup'=>$button_backk]);
 } 
 elseif($command == 'supp'){
-save("user/$chat_id/command.txt","noun");
+save("user/$chat_id/command.txt","supp");
 bot('ForwardMessage',[
 'chat_id'=>$admin,
 'from_chat_id'=>$from_id,
