@@ -413,19 +413,22 @@ $newgold = $gold - $s_vip;
 save("user/$chatid/hesab_golden.txt","ویژه");
 save("user/$chatid/gold.txt",$newgold);    
 save("user/$chatid/yesgold.txt","ok");
+$codeme = rand(0000000,1234567);
 bot('editMessagetext', [
 'chat_id'=>$chatid,
-'text'=>"تبریک😊;
-حساب کاربری شما با موفقیت ویژه شد🏆",
+'text'=>"تبریک عرض میکنیم کاربر عزیز $first 
+ویزیت رایگان شما زده شد و اکنون میتوانید با استفاده از آن با پزشک مورد نظر خود در تماس باشید لذا نوبت خود را یادداشت فرمایید.
+✅ نوبت شما :$codeme",
 'message_id'=>$messageid,
 'parse_mode'=>"HTML",
 'reply_markup'=>$button_backk]);
+save("Code/codeme.txt","$codeme");
 } else {
 bot('editMessagetext', [
 'chat_id'=>$chatid,
 'text'=>"متاسفانه شما $s_vip امتیاز ندارید❌
 🔰امتیازات شما: $gold
-توجه ممکن است شما از قبل ویژه باشید و این خطا بخاطر همین است❗️",
+",
 'message_id'=>$messageid,
 'parse_mode'=>"HTML",
 'reply_markup'=>$button_backk]);
