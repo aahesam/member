@@ -352,8 +352,9 @@ bot('editMessagetext', [
 elseif($data == "settings"){
 bot('editMessagetext', [
 'chat_id'=>$chatid,
-'text'=>"دوست عزیز به بخش تنظیمات خوش آمدید🚦
-اطلاعات رو تکمیل کنید با تشکر",
+'text'=>"✅ لطفا سرویس پزشک مورد نظر خود را انتخاب نمایید.
+✅ پس از انتخاب پزشک کد ویزیت  خود را که از منشی ربات گرفته ایید وارد کنید تا به پزشک مربوطه متصل شوید.
+✅ درصورت نداشتن کد ویزیت از طریق منشی ربات اقدام فرمایید.",
 'message_id'=>$messageid,
 'parse_mode'=>"HTML",
 'reply_markup'=>$button_settings]);
@@ -370,9 +371,9 @@ bot('editMessagetext', [
 'message_id'=>$messageid,
 'parse_mode'=>"HTML",
 'reply_markup'=>$button_backk]);
-save("Code/codeme.txt","$codeme");
+save("user/$chatid/codeme.txt","$codeme");
 }else{
-    save("Code/codeme.txt","noun");
+    save("user/$chatid/codeme.txt","noun");
     bot('editmessagetext',[
         'chat_id'=>$chatid,
         'text'=>"میزان امتیاز شما کافی نمیباشد لطفا از دو روش زیر مجموعه گیری و یا پرداخت مبلغ ۳ هزار تومن نوبت بگیرید.",
@@ -380,7 +381,7 @@ save("Code/codeme.txt","$codeme");
         'parse_mode'=>"HTML",
         'reply_markup'=>json_encode(['inline_keyboard'=>[
             [['text'=>"دریافت نوبت 🔖",'callback_data'=>"buyvip"]],
-            [['text'=>"🔙",'callback_data'=>"back"]],
+            [['text'=>"برگشت 🔙",'callback_data'=>"back"]],
             ],'resize_keyboard'=>true])
             ]);
 }}
