@@ -329,12 +329,11 @@ bot('editMessagetext', [
 'message_id'=>$messageid,
 'parse_mode'=>"HTML",
 'reply_markup'=>json_encode(['inline_keyboard'=>[
-[['text'=>'👉اسم شما㊗️','callback_data'=>'cando'],['text'=>"$first",'callback_data'=>'cando']],
-[['text'=>'👉نام کاربری شما🆔','callback_data'=>'cando'],['text'=>"@$username",'callback_data'=>'cando']],
-[['text'=>'امتیاز','callback_data'=>'cando'],['text'=>"$gold",'callback_data'=>'cando']],
+[['text'=>'👉اسم㊗️','callback_data'=>'cando'],['text'=>"$first",'callback_data'=>'cando']],
+[['text'=>'👉نام کاربری🆔','callback_data'=>'cando'],['text'=>"@$username",'callback_data'=>'cando']],
+[['text'=>'👉امتیاز','callback_data'=>'cando'],['text'=>"$gold",'callback_data'=>'cando']],
 [['text'=>'تعداد زیرمجموعه👤','callback_data'=>'cando'],['text'=>"$user_members",'callback_data'=>'cando']],
-[['text'=>'🚸تعداد امتیاز جهت ویژه شدن','callback_data'=>'cando'],['text'=>"$s_vip",'callback_data'=>'cando']],
-[['text'=>"🔙",'callback_data'=>"back"]],
+[['text'=>"برگشت 🔙",'callback_data'=>"back"]],
 ],])
 ]);
 }
