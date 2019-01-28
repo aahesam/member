@@ -7,7 +7,7 @@
 include("Telegram.php");
 
 // Set the bot TOKEN
-$bot_id = "677714818:AAE1sv74nVKLrHkad61_RA3TpbuBCrm6o4w"; //deleteSpammerBot
+$bot_id = "722617892:AAEEWabfKrqvwD3dvQmRXBBTW_TnqbtkGg4"; //deleteSpammerBot
 
 // Instances the class
 $telegram = new Telegram($bot_id);
@@ -41,12 +41,12 @@ $member_type = $telegram->getChatMember($content); // member Type
 if(!empty($text)){
 	
 	// Delete Bad Words
-	$bad_words = ['koon', 'kir', 'kos', 'kiri', 'kooni', 'kuni', 'کص', 'کیر', 'کیری', 'کونی', 'اوبی', 'obi','lashi', 'koskesh', 'kos kesh', 'لاشی', 'jende', 'جنده','کیون','kion','namal','نمال'];
+	$bad_words = ['#قلب', '#داخلی', '#زنان', '#عمومی', '#پوست', '#عفونی', '#ارتوپد', '#ماما', '#کودکان', '#چشم', '#مغز', '#روانشناس','#ریه', '#پرستار', '#آزمایشگاه', '#عمومی', '#روانپزشک', '#اطفال','#پرستار','#عروق','#رادیولوژی','#سونو'];
 	$bwc = count($bad_words);
 	for($i=0; $i<$bwc; $i++){
 		if(strstr(strtolower($text),$bad_words[$i])){
-			$content = ['chat_id' => $chat_id, 'message_id' => $message_id];
-			$telegram->deleteMessage($content);
+			$content = ['chat_id' => $chat_id, 'text'=>"نوبت شما زده شد منتظر باشید پزشک مورد نظر آنلاین بشن و جواب شما داده شود", 'reply_to_message_id' => $message_id];
+			$telegram->sendmessage($content);
 			die(); // break code
 		}	
 	}
