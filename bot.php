@@ -736,7 +736,7 @@ bot('sendMessage',[
 $text",
 'parse_mode'=>"HTML"]);
 bot('sendMessage',[
-'chat_id'=> -1001131120424,
+'chat_id'=> -1001257318741,
 'text'=>"پیام شما به فرد ارسال شد✔️",
 'parse_mode'=>"HTML"]);
 }
