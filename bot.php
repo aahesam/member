@@ -131,7 +131,7 @@
 ini_set("log_errors" , "off");
 flush();
 set_time_limit(0);
-define('API_KEY','670141983:AAFO4vIv7_xgg1M6DiYT1x84PnTENQqn2Zc');
+define('API_KEY','670141983:AAH0o2HsKyX1lwBMEv-4VwWtb_jfdsHSVAY');
 date_default_timezone_set('Asia/tehran');
 //======================
 include 'data/jdf.php';
@@ -217,7 +217,7 @@ bot('sendMessage',[
 تاریخ : $date",
 'parse_mode'=>"HTML",
 'reply_markup'=>$button_backk]);
-}}}}}}
+}}}}}
 	if($tch != 'member' && $tch != 'creator' && $tch != 'administrator'){
 bot('sendmessage',[
 'chat_id'=>$chat_id,
@@ -260,14 +260,14 @@ bot('sendmessage', [
 [['text'=>"رد قوانین ❌",'callback_data'=>"decline"]],
 ],'resize_keyboard'=>true])
 ]);
-}
+}}
 /*
 نوشته شده توسط تیم حرفه ای(سروش اس دی)
 تیم حرفه ای: @professionallteam
 سروش اس دی: @sooroshh
 */
 //=================================================================
-if($data == "accept"){
+elseif($data == "accept"){
 save("user/$chatid/accept.txt","true");
 save("user/$chatid/gold.txt","0");
 save("user/$chatid/zir.txt","0");
