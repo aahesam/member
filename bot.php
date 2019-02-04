@@ -354,14 +354,15 @@ bot('editMessagetext', [
 ]);
 }
 //=================================================================
-elseif($data == "createvip"){
+elseif($data == "buyno"){
 bot('editMessagetext', [
 'chat_id'=>$chatid,
-'text'=>"✅ به بخش مشاوره و ویزیت پزشک خوش آمدید.
-✅ لطفا سرویس پزشک محترم مورد نظر را انتخاب فرمایید.",
+'text'=>"✅ در این بخش از طریق پشتیبانی میتوانید حساب خود را شارژ نمایید 
+✅ با ارسال پیام به @DrOnline_Supbot و پرداداخت مباغ ۳ هزار تومن با بهترین متخصصان ما در ارتباط باشید .
+✅ پیشنهاد مدیریت این است که از طریق بخش ویزیت رایگان با دعوت دوستان و آشنایان خود ویزیت رایگان دریافت نمایید..",
 'message_id'=>$messageid,
 'parse_mode'=>"HTML",
-'reply_markup'=>$button_createvip]);
+'reply_markup'=>$button_backk]);
 }
 //=================================================================
 elseif($data == "settings"){
@@ -395,7 +396,7 @@ save("user/$chatid/codeme.txt","$codeme");
         'message_id'=>$messageid,
         'parse_mode'=>"HTML",
         'reply_markup'=>json_encode(['inline_keyboard'=>[
-            [['text'=>"دریافت نوبت 🔖",'callback_data'=>"buyvip"]],
+            [['text'=>"دریافت نوبت 🔖",'callback_data'=>"buyno"]],
             [['text'=>"برگشت 🔙",'callback_data'=>"back"]],
             ],'resize_keyboard'=>true])
             ]);
@@ -425,7 +426,7 @@ bot('editMessagetext', [
 elseif($data == "vipsub"){
 $gold = file_get_contents("user/$chatid/gold.txt");
 if($gold > $s_vip && $okgold != 'ok'){
-$newgold = $gold - $s_vip;
+$newgold = $gold - 5;
 save("user/$chatid/hesab_golden.txt","ویژه");
 save("user/$chatid/gold.txt",$newgold);    
 save("user/$chatid/yesgold.txt","ok");
