@@ -678,7 +678,7 @@ bot('editMessagetext', [
 elseif($data == "banner"){
 bot('sendPhoto',[
 'chat_id'=>$chatid,
-'photo'=>"https://esdisroush.000webhostapp.com/P.jpeg",
+'photo'=>"https://www.imgurl.ir/uploads/d175096_.jpeg",
 'caption'=>"✅ پزشک همراه هر ایرانی
 ✅ داشتن و استفاده از این ربات برای هر ایرانی لازمه
 ✅ با استفاده از این ربات هر موقع از شبانه روز سوال خود را با پزشک مورد نظر خود درمیان بگذارید.
@@ -715,12 +715,12 @@ bot('editMessagetext', [
 elseif($command == 'supp'){
 save("user/$chat_id/command.txt","supp");
 bot('ForwardMessage',[
-'chat_id'=> -1001131120424,
+'chat_id'=> -1001257318741,
 'from_chat_id'=>$from_id,
 'message_id'=>$message_id]);
 bot('sendmessage',[
 'chat_id'=>$chat_id,
-'text' => "پیام شما به پزشک مربوطه ارسال شد، درصورت پایان مکالمه با پزشک گزینه ی پایین را کلیک نمایید",
+'text' => "پیام شما به پزشک مربوطه ارسال شد درصورت دریافت پاسخ خود گزینه ی پایان مکالمه را کلیک نمایید. درغیر این صورت در همین صفحه بمانید تا پاسخ خود را دریافت نمایید،",
 'message_id'=>$messageid,
 'parse_mode'=>"HTML",
 'reply_markup'=>json_encode(['inline_keyboard'=>[
