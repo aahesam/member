@@ -386,7 +386,10 @@ bot('editMessagetext', [
 ✅ نوبت شما : $codeme",
 'message_id'=>$messageid,
 'parse_mode'=>"HTML",
-'reply_markup'=>$button_backk]);
+'reply_markup'=>json_encode(['inline_keyboard'=>[
+[['text'=>"ویزیت با پزشک 🔖",'callback_data'=>"settings"]],
+]])
+]);
 save("user/$chatid/codeme.txt","$codeme");
 }else{
     save("user/$chatid/codeme.txt","noun");
