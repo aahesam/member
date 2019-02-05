@@ -715,7 +715,7 @@ bot('editMessagetext', [
 elseif($command == 'supp'){
 save("user/$chat_id/command.txt","supp");
 bot('ForwardMessage',[
-'chat_id'=> -1001257318741,
+'chat_id'=> -1001131120424,
 'from_chat_id'=>$from_id,
 'message_id'=>$message_id]);
 bot('sendmessage',[
@@ -736,7 +736,7 @@ bot('sendMessage',[
 $text",
 'parse_mode'=>"HTML"]);
 bot('sendMessage',[
-'chat_id'=> -1001257318741,
+'chat_id'=> -1001131120424,
 'text'=>"پیام شما به فرد ارسال شد✔️",
 'parse_mode'=>"HTML"]);
 }
