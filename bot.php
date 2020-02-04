@@ -131,7 +131,7 @@
 ini_set("log_errors" , "off");
 flush();
 set_time_limit(0);
-define('API_KEY','670141983:AAH0o2HsKyX1lwBMEv-4VwWtb_jfdsHSVAY');
+define('API_KEY','670141983:AAHv-ACtcF5q0BAiYeetsaHuwVOGsn1XREc');
 date_default_timezone_set('Asia/tehran');
 //======================
 include 'data/jdf.php';
@@ -303,9 +303,9 @@ bot('editMessagetext', [
 elseif($data == "decline"){
 bot('editMessagetext', [
 'chat_id'=>$chatid,
-'text'=>"شما با قوانین ما موافق نبودید
+'text'=>"شما با قوانین ربات موافق نبودید 
 
-هر وقت قبول کردید امکان ورود به ربات را دارید",
+و امکان استفاده از ربات را ندارید لطفا ابتدا قوانین را مطالعه و موافقت نمایید",
 'message_id'=>$messageid,
 'parse_mode'=>"HTML"]);  
 }
@@ -377,9 +377,9 @@ bot('editMessagetext', [
 }
 //=================================================================
 elseif($data == "buyvip"){
-    if($gold > 5){
-    $codeme = rand(0000000,1234567);
-    save("user/$chatid/gold.txt",($gold-5));
+    if($gold = 0){
+    $codeme = rand(123,456);
+    save("user/$chatid/gold.txt",($gold-0));
 bot('editMessagetext', [
 'chat_id'=>$chatid,
 'text'=>"نوبت شما به صورت خودکار زده شد اکنون آن را یادداشت نموده و با کلیک بر روی «ویزیت با پزشک» در پایین صفحه با پزشک مورد نر خود در ارتباط باشید..
@@ -429,11 +429,11 @@ bot('editMessagetext', [
 elseif($data == "vipsub"){
 $gold = file_get_contents("user/$chatid/gold.txt");
 if($gold > $s_vip && $okgold != 'ok'){
-$newgold = $gold - 5;
+$newgold = $gold;
 save("user/$chatid/hesab_golden.txt","ویژه");
 save("user/$chatid/gold.txt",$newgold);    
 save("user/$chatid/yesgold.txt","ok");
-$codeme = rand(0000000,1234567);
+$codeme = rand(123,456);
 bot('editMessagetext', [
 'chat_id'=>$chatid,
 'text'=>"تبریک عرض میکنیم کاربر عزیز $first 
@@ -464,103 +464,8 @@ bot('editMessagetext', [
 'reply_markup'=>$button_det]);
 }
 //=================================================================
-elseif($data == "move"){
-if($gold < $s_g){
-bot('editMessagetext', [
-'chat_id'=>$chatid,
-'text'=>"❗️توجه کنید دوست عزیز 
-🌱برای جابه جا کردن  امتیاز حداقل باید $s_g امتیاز داشته باشید",
-'message_id'=>$messageid,
-'parse_mode'=>"HTML",
-'reply_markup'=>$button_backk]);
-}else{
-save("user/$chatid/command.txt","send gold");
-bot('editMessagetext', [
-'chat_id' =>$chatid,
-'text' => "آیدی کاربر مورد را ارسال نمایید!",
-'message_id'=>$messageid,
-'parse_mode' => "HTML",
-'reply_markup'=>$button_backk]);
-}}
-elseif($data == "move"){
-if($gold < $s_g){
-bot('editMessagetext', [
-'chat_id'=>$chatid,
-'text'=>"❗️توجه کنید دوست عزیز 
-🌱برای جابه جا کردن  امتیاز حداقل باید $s_g امتیاز داشته باشید",
-'message_id'=>$messageid,
-'parse_mode'=>"HTML",
-'reply_markup'=>$button_backk]);
-}else{
-save("user/$chatid/command.txt","send gold");
-bot('editMessagetext', [
-'chat_id' =>$chatid,
-'text' => "آیدی کاربر مورد را ارسال نمایید!",
-'message_id'=>$messageid,
-'parse_mode' => "HTML",
-'reply_markup'=>$button_backk]);
-}}
-/*
-نوشته شده توسط تیم حرفه ای(سروش اس دی)
-تیم حرفه ای: @professionallteam
-سروش اس دی: @sooroshh
-*/
-elseif($command == 'send gold'){
-$explode = explode("\n",$Member);
-if($text != $from_id && in_array($text,$explode)){
-save("user/$chatid/command.txt","send gold2");
-save("user/$chatid/waitt.txt",$text);
-bot('editMessagetext', [
-'chat_id' => $chatid,
-'text' => "↕️ مقدار امتیاز شما: $gold
-↕️ میخواهید چه تعداد امتیاز انتقال بدید:",
-'message_id'=>$messageid,
-'parse_mode' => "HTML",
-'reply_markup'=>$button_backk]);
-}else{
-bot('editMessagetext', [
-'chat_id' => $chat_id,
-'text' => "خطا❌",
-'message_id'=>$messageid,
-'parse_mode' => "HTML",
-'reply_markup'=>$button_backk]);
-}}
-elseif($command == 'send gold2'){
-if(preg_match('/^([0-9])/',$text)){
-if($text > $gold){
-bot('editMessagetext', [
-'chat_id' =>$chatid,
-'text' => "↕️ مقدار امتیاز شما $gold میباشد.
-↕️ به اندازه امتیاز خودتون میتونید انتقال بدید",
-'message_id'=>$messageid,
-'parse_mode' => "HTML",
-'reply_markup'=>$button_backk]);	
-}else{
-save("user/$waittt/gold.txt",($gold_wait+$text));
-save("user/$from_id/gold.txt",($gold-$text) );
-save("user/$chatid/command.txt","none");
-bot('editMessagetext', [
-'chat_id' =>$chatid,
-'text' => "↕️ مقدار $text  امتیاز به کاربر $waittt انتقال داده شد.",
-'message_id'=>$messageid,
-'parse_mode' => "HTML",
-'reply_markup'=>$button_backk]);
-bot('editMessagetext', [
-'chat_id' => $waittt,
-'text' => "↕️مقدار $text  امتیاز از طرف $from_id  به حساب شما انتقال داده شد.",
-'parse_mode' => "HTML",
-'reply_markup'=>$button_backk]);
-}}else{
-bot('editMessagetext', [
-'chat_id' => $chatid,
-'text' => "خطا❌",
-'message_id'=>$messageid,
-'parse_mode' => "HTML",
-'reply_markup'=>$button_backk]);
-}}
-//=================================================================
 elseif($data == "emrozane"){
-$timerand = rand(1,3);
+$timerand = rand(10,30);
 $dattee = date('Ymd');
 @$gettime = file_get_contents("user/$chatid/dates.txt");
 if ($gettime == $dattee) {
@@ -606,7 +511,7 @@ bot('editMessagetext', [
 ],'resize_keyboard'=>true])
 ]);
 }
-//=================================================================
+=================================================================
 /*
 نوشته شده توسط تیم حرفه ای(سروش اس دی)
 تیم حرفه ای: @professionallteam
@@ -666,11 +571,10 @@ elseif($data == "Guide"){
 bot('editMessagetext', [
 'chat_id'=>$chatid,
 'text'=>"✅ راهنمای ربات هوشمند پزشک همراه:
-✅ از قسمت «دریافت نوبت از منشی» به دو روش گفته شده میتوانید نوبت دریافت کنید.
-➿ توجه داشته باشید که از قسمت نوبت رایگان با دریافت بنر شخصی شما و ارسال آن به دو نفر که از قبل عضو ربات نبوده اندو به شرطی که با همان لینک شما وارد ربات شوند نوبت رایگان دریافت خواهید کرد.
-✅ از قسمت «ویزیت پزشک» با انتخاب سرویس تخصص خود و وارد کردن نوبتی که از منشی دریافت کرده ایید، با پزشک موردنظر در ارتباط باشید.
+✅ از قسمت «دریافت نوبت از منشی» میتوانید نوبت خود را دریافت کنید.
+➿ توجه داشته باشید جهت منظم ساختن ربات هر بار یک کد ویریت سه رقمی به شما داده میشود که هر بار تغییر میکند.
+✅ از قسمت «ویزیت پزشک» با انتخاب سرویس تخصص خود ، نوبتی را که از منشی ربات دریافت کردید را وارد نمایید.
 ➿ توجه بفرمایید که پس از پرسش سوال خود حتما در همان صفحه بمانید تا پاسخ خود را دریافت نمایید سپس دکمه ی پایان مکالمه را کلیک کنید.
-✅از قسمت «هدیه روزانه» به پاس قدر دانی از استفاده ی مکرر شما از ربات روازنه یعنی هر ۲۴ ساعت امتیاز رایگان دریافت نمایید.
 ✅ شما میتوانید انتقادات ، پیشنهادات و نظرات خود را از قسمت پشتیبانی برای ما ارسال کنید.
 ➰➿➰ ساخته شده توسط تیم پزشکی دکتر آنلاین➰➿➰",
 'message_id'=>$messageid,
