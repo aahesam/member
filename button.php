@@ -21,17 +21,15 @@ $sooroshh = json_encode(['inline_keyboard'=>[
 ],]);
 //
 $button_admin = json_encode(['inline_keyboard'=>[
-[['text'=>"دریافت نوبت از منشی 🔖",'callback_data'=>"nobat"]],
-[['text'=>"ویزیت پزشک 📝",'callback_data'=>"settings"]],
-[['text'=>"🎉فرعی🛢",'callback_data'=>"details"], ['text'=>"راهنما🛒",'callback_data'=>"Guide"]],
+[['text'=>"دریافت نوبت از منشی 📑",'callback_data'=>"buyvip"]],
+[['text'=>"راهنما📖",'callback_data'=>"Guide"]],
 [['text'=>"➰ کانال ما",'url'=>"https://t.me/Dronliine"], ['text'=>" پشتیبانی ربات📱",'url'=>"https://t.me/DrOnline_SupBot"]],
 [['text'=>"پنل مدیریت ربات",'callback_data'=>"panel"]],
 ],]);
 //
 $button_menu = json_encode(['inline_keyboard'=>[
-[['text'=>"دریافت نوبت از منشی 🔖",'callback_data'=>"nobat"]],
-[['text'=>"ویزیت پزشک 📝",'callback_data'=>"settings"]],
-[['text'=>"🎉فرعی🛢",'callback_data'=>"details"], ['text'=>"راهنما🛒",'callback_data'=>"Guide"]],
+[['text'=>"دریافت نوبت از منشی 📑",'callback_data'=>"buyvip"]],
+[['text'=>"راهنما📖",'callback_data'=>"Guide"]],
 [['text'=>"➰ کانال ما",'url'=>"https://t.me/Dronliine"], ['text'=>"پشتیبانی ربات 📱",'url'=>"https://t.me/DrOnline_SupBot"]],
 ],]);
 //
@@ -67,8 +65,8 @@ $button_settings = json_encode(['inline_keyboard'=>[
 ['text'=>"سرویس چشم",'callback_data'=>"estcode"]],
 [['text'=>"سرویس مغزواعصاب",'callback_data'=>"estcode"], ['text'=>"سرویس روانپزشک",'callback_data'=>"estcode"]],
 [['text'=>"سرویس عفونی",'callback_data'=>"estcode"], ['text'=>"سرویس کودکان",'callback_data'=>"estcode"]],
-[['text'=>"سرویس جراح عمومی",'callback_data'=>"estcode"], ['text'=>"سرویس رادیولوژی",'callback_data'=>"estcode"]],
-[['text'=>"سرویس دندانپزشکی",'callback_data'=>"estcode"], ['text'=>"سرویس طب سنتی",'callback_data'=>"estcode"]],
+[['text'=>"سرویس جراحی",'callback_data'=>"estcode"], ['text'=>"سرویس رادیولوژی",'callback_data'=>"estcode"]],
+[['text'=>"سرویس دندانپزشک",'callback_data'=>"estcode"], ['text'=>"سرویس طب سنتی",'callback_data'=>"estcode"]],
 [['text'=>"برگشت 🔙",'callback_data'=>"back"]],
 ],]);
 //
